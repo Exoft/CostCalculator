@@ -1,7 +1,14 @@
-var pages = ['first', 'os', 'screen', 'design', 'api', 'aa', 'ff', 'dates', 'social', 'ecom', 'media', 'admin', 'security', 'estimate'];
+
 var price = 0;
 
-var status
+var os = {android:24, ios:35, both:70, page:1}
+
+var screen = {sm:24, md:55, bg:77, lg:100, page:2}
+
+var pages = ['first', 'os', 'screen', 'design', 'api', 'aa', 'ff', 'dates', 'social', 'ecom', 'media', 'admin', 'security', 'estimate'];
+
+
+var status;
 
 function nextStep(i) {
 
@@ -11,7 +18,7 @@ function nextStep(i) {
 	now.style.display = "none";
 	next.style.display = "table-cell";
 
-	return status = i+1;
+	return status=i+1;
 };
 
 function changePrice(n) {
@@ -29,26 +36,32 @@ document.getElementById('prev').addEventListener('click', function(){
 	}
 });
 
+
 document.getElementById('get').addEventListener('click', function() {
 	nextStep(0)
 	changePrice(0);
 	document.getElementById('cost').style.visibility = "visible";
 });
 
-document.getElementById('android').addEventListener('click',function() {
-	nextStep(1);
-	changePrice(25);
-	document.getElementById('prev').style.visibility = "visible";
+
+document.querySelector('#os').addEventListener('click', function () {
+	var elem = event.target.id;
+	var a = Object.keys(os);
+	for (var i = 0; i < Object.keys(os).length; i++) {
+	 	if (elem==a[i]) {
+	 		nextStep(os.page);
+
+	 	};
+}
 });
 
-document.getElementById('ios').addEventListener('click',function() {
-	nextStep(1);
-	changePrice(35);
-	document.getElementById('prev').style.visibility = "visible";
+document.querySelector('#screen').addEventListener('click', function () {
+	var elem = event.target.id;
+	var a = Object.keys(screen);
+	for (var i = 0; i < Object.keys(screen).length; i++) {
+	 	if (elem==a[i]) {
+	 		nextStep(screen.page);
+	 	};
+}
 });
 
-document.getElementById('and_ios').addEventListener('click',function() {
-	nextStep(1);
-	changePrice(70);
-	document.getElementById('prev').style.visibility = "visible";
-});

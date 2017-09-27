@@ -1,5 +1,6 @@
 * {
 	text-decoration: none;
+	font-family: "Lucida Grande"; 
 }
 
 body {
@@ -8,6 +9,20 @@ body {
 	margin:0;
 }
 
+#first p {
+	margin-right: auto;
+	margin-left: auto;
+	width: 35em;
+	line-height: 1.5em;
+	margin-bottom: 3em;
+}
+
+#get{
+	font-weight: 900;
+	font-size: 1em;
+	height: 2.5em;
+
+}
 
 header {
 	display: flex;
@@ -38,35 +53,47 @@ main {
 }
 
 h3 {
+	font-size: 36px;
 	text-transform: uppercase;
 	color: #6DD7E4;
 }
 
 button {
-	background-color: #ACC9E9;
+	background-color: #ADC9E9;
 	border-radius: 3em;
 	height: 5em;
 	width: 13em;
+	border: none;
+	margin: 1em;
+}
+
+button:hover {
+	background-color: #333685;
+	color: #fff;
 }
 
 h4 {
-	font-size: 1.5em;
-	margin-bottom: 3em;
+	font-size: 36px;
 }
 
 #first {
-	background-color: #4A4C65;
+	background-position: center;
+	background-image: url(image/mainbg.png);
+	background-color: #1E1F3D;
 	color: #fff; 
 }
 
 #os {
 	display: none;
-	background-color: #B9D2EE; 
+	background-color: #B9D2ED; 
 }
 
 #screen {
 	display: none;
-	background-color: #DFEBF9; 
+	background-color: #E4F1FE; 
+	background-image: url(image/screenbg.png);
+	background-position: center left;
+	background-size: 150%;
 }
 
 #design {
