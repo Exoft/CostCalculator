@@ -1,0 +1,129 @@
+* {
+	text-decoration: none;
+}
+
+body {
+	text-decoration: none;
+	padding: 0;
+	margin:0;
+}
+
+
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+#prev {
+	visibility: hidden;
+	display: inline-block;
+}
+
+#cost {
+	visibility: hidden;
+}
+
+main {
+	position:absolute;
+	z-index: -1;
+	top:0;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+h3 {
+	text-transform: uppercase;
+	color: #6DD7E4;
+}
+
+button {
+	background-color: #ACC9E9;
+	border-radius: 3em;
+	height: 5em;
+	width: 13em;
+}
+
+h4 {
+	font-size: 1.5em;
+	margin-bottom: 3em;
+}
+
+#first {
+	background-color: #4A4C65;
+	color: #fff; 
+}
+
+#os {
+	display: none;
+	background-color: #B9D2EE; 
+}
+
+#screen {
+	display: none;
+	background-color: #DFEBF9; 
+}
+
+#design {
+	display: none;
+	background-color: #5F619C;
+	color: #fff;
+}
+
+#api {
+	display: none;
+	background-color: #B9D2EE;
+}
+
+#aa {
+	display: none;
+	background-color: #E1EFFC;
+}
+
+#ff {
+	display: none;
+	background-color: #5F619C;
+	color: #fff;
+}
+
+#dates {
+	display: none;
+	background-color: #B9D2EE;
+}
+
+#social {
+	display: none;
+	background-color: #DFEBF9;
+}
+
+#ecom {
+	display: none;
+	background-color: #5F619C;
+	color: #fff;
+}
+
+#media {
+	display: none;
+	background-color: #B9D2EE;
+}
+
+#admin {
+	display: none;
+	background-color: #E4F0FE;
+}
+
+#security {
+	display: none;
+	background-color: #5F619C;
+	color: #fff;
+}
+
+#estimate {
+	display: none;
+	background-color: #282947;
+}
