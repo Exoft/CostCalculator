@@ -11,7 +11,7 @@ var ecom = {name:'ecom', payment:300, shopping:350, marketplace:300};
 var media = {name:'media', video:100, audio:100, photo:50};
 var admin = {name:'admin', cms:300, userAdmin:350, monitoring:400, payAdmin:450};
 var security = {name:'security', role:300, data:250, privecy:300};
-
+var estimate = {name:'estimate'}
 var arr = [first, os, screen, design, api, aa, ff, dates, social, ecom, media, admin, security, estimate];
 
 var price = 0;
@@ -29,7 +29,7 @@ var status;
 
 document.querySelector('main').addEventListener('click', function () {
 	var elem = event.target;
-	var par = elem.parentNode.id;
+	var par = elem.parentNode.parentNode.id;
 
  	for (var x = 0; x < arr.length; x++) {
  		if (par==arr[x].name) {

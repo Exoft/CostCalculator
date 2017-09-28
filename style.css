@@ -12,7 +12,7 @@ body {
 #first p {
 	margin-right: auto;
 	margin-left: auto;
-	width: 35em;
+	max-width: 35em;
 	line-height: 1.5em;
 	margin-bottom: 3em;
 }
@@ -58,13 +58,25 @@ h3 {
 	color: #6DD7E4;
 }
 
+.but {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-wrap:wrap;
+
+}
+
 button {
 	background-color: #ADC9E9;
 	border-radius: 3em;
 	height: 5em;
 	width: 13em;
 	border: none;
-	margin: 1em;
+	margin: 0.75em;
+}
+
+button:focus {
+	outline:none;
 }
 
 button:hover {
@@ -76,8 +88,39 @@ h4 {
 	font-size: 36px;
 }
 
+form {
+	margin-top: 4em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+input {
+	box-sizing: border-box;
+	background-color: transparent;
+	border: solid 1px #fff;
+	border-radius: 3em;
+	margin-bottom: 1em;
+	font-size: 14px;
+	color: #fff;
+	height: 2.6em;
+	width: 19em;
+	padding: 0 1em;
+}
+
+input:focus {
+	outline: none;
+}
+
+input:last-child {
+	background-color: #B9D2ED;
+	color: #000;
+	border: none;
+	margin: 1.5em;
+}
+
 #first {
-	background-position: center;
+	background-size: cover;
 	background-image: url(image/mainbg.png);
 	background-color: #1E1F3D;
 	color: #fff; 
@@ -92,8 +135,7 @@ h4 {
 	display: none;
 	background-color: #E4F1FE; 
 	background-image: url(image/screenbg.png);
-	background-position: center left;
-	background-size: 150%;
+	background-size: cover;
 }
 
 #design {
@@ -109,7 +151,8 @@ h4 {
 
 #aa {
 	display: none;
-	background-color: #E1EFFC;
+	background-image: url(image/aabg.png);
+	background-color: #E4F1FE;
 }
 
 #ff {
@@ -120,12 +163,14 @@ h4 {
 
 #dates {
 	display: none;
-	background-color: #B9D2EE;
+	background-color: #B9D2ED;
 }
 
 #social {
 	display: none;
-	background-color: #DFEBF9;
+	background-color: #E4F1FE;
+	background-image: url(image/socialbg.png);
+	background-size: cover;
 }
 
 #ecom {
@@ -141,7 +186,9 @@ h4 {
 
 #admin {
 	display: none;
-	background-color: #E4F0FE;
+	background-color: #E4F1FE;
+	background-image: url(image/adminbg.png);
+	background-size: cover;
 }
 
 #security {
@@ -152,5 +199,8 @@ h4 {
 
 #estimate {
 	display: none;
-	background-color: #282947;
+	background-color: #1E1F3D;
+	background-image: url(image/estimatebg.png);
+	background-size: cover;
+	color: #fff;
 }
