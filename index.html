@@ -5,127 +5,239 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<header>
-		<p id="prev">Previous Quastion</p>
-		<div id="cost">
-			<p>Rough Estimate</p>
-			<p id="price"></p>
-		</div>
-	</header>
-
 	<main>
-		<div class="container" id="first">
+		<div class="title" id="first">
 			<h3>Thinking to build a mobile app?</h3>
 			<p>Find out how much you'll pay for developing mobile application. Mobile aplication development cost calculator helps you to estimate your expence &#38; to stay on budget.</p>
 			<div>
-			<button id="get">Get an Estimate</button>
+			<a href="#os""><button id="get">Get an Estimate</button></a>
 			</div>
 		</div>
+		
 		<div class="container" id="os">
+			<header>
+				<p id="prev"></p>
+				<div id="cost">
+				<p>Rough Estimate</p>
+				<p id="price">$150</p>
+				</div>
+			</header>
+			<div class="block">
 			<h4>Mobile Operation System</h4>
 			<div class="but">
-				<button id="android">Android</button>
-				<button id="ios">IOS</button>
-				<button id="both">iOS + Andropid<br>Cross-platform</button>
+				<a href="#screen"><button id="android">Android</button></a>
+				<a href="#screen"><button id="ios">IOS</button></a>
+				<a href="#screen"><button id="both">iOS + Andropid<br>Cross-platform</button></a>
+			</div>
 			</div>
 		</div>
+		
 		<div class="container" id="screen">
+			<header>
+				<a href="#os" id="prev"><img src="image/arrow.png">Previous Quastion</a>
+				<div id="cost">
+					<p>Rough Estimate</p>
+					<p id="price">$150</p>
+				</div>
+			</header>
+			<div class="block">
 			<h4>Number of Screens</h4>
 			<div class="but">
-				<button id="sm">2-8</button>
-				<button id="md">9-15</button>
-				<button id="bg">16-20</button>
-				<button id="lg">21+</button>
+				<a href="#design"><button id="sm">2-8</button></a>
+				<a href="#design"><button id="md">9-15</button></a>
+				<a href="#design"><button id="bg">16-20</button></a>
+				<a href="#design"><button id="lg">21+</button></a>
+			</div>
 			</div>
 		</div>
+	
 		<div class="container" id="design">
+			<header>
+				<a href="#screen" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+				<div id="cost">
+					<p>Rough Estimate</p>
+					<p id="price">$150</p>
+				</div>
+			</header>
+			<div class="block">
 			<h4>User Interface Design</h4>
 			<div class="but">
-				<button id ="stock">Stock Design</button>
-				<button id="custom">Custom Design</button>
-				<button id="animated">Animated UI</button>
+				<a href="#api"><button id ="stock">Stock Design</button></a>
+				<a href="#api"><button id="custom">Custom Design</button></a>
+				<a href="#api"><button id="animated">Animated UI</button></a>
+			</div>
 			</div>
 		</div>
+		
 		<div class="container" id="api">
+			<header>
+				<a href="#design" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+				<div id="cost">
+					<p>Rough Estimate</p>
+					<p id="price">$150</p>
+				</div>
+			</header>
+			<div class="block">
 			<h4>APIs &#38; Integration</h4>
 			<div class="but">
-				<button id="with">App with Api</button>
-				<button id="simple">Simple API without accounts</button>
-				<button id="advanced">Advanced API</button>
+				<a href="#aa"><button id="with">App with Api</button></a>
+				<a href="#aa"><button id="simple">Simple API without accounts</button></a>
+				<a href="#aa"><button id="advanced">Advanced API</button></a>
 			</div>
 		</div>
+		</div>
+		
 		<div class="container" id="aa">
+			<header>
+				<a href="#api" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+				<div id="cost">
+					<p>Rough Estimate</p>
+					<p id="price">$150</p>
+				</div>
+			</header>
+			<div class="block">
 			<h4>Authentication &#38; Authorization</h4>
 			<div class="but">
-				<button id="email">Email logging</button>
-				<button id="soc">Social logging</button>
-				<button id="twoFactor">Two-factor authentication</button>
+				<a href="#ff"><button id="email">Email logging</button></a>
+				<a href="#ff"><button id="soc">Social logging</button></a>
+				<a href="#ff"><button id="twoFactor">Two-factor authentication</button></a>
+			</div>
 			</div>
 		</div>
+		
 		<div class="container" id="ff">
+			<header>
+				<a href="#aa" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+				<div id="cost">
+					<p>Rough Estimate</p>
+					<p id="price">$150</p>
+				</div>
+			</header>
+			<div class="block">
 			<h4>Functionality &#38; Features</h4>
 			<div class="but">
-				<button id="dash">Dashboard</button>
-				<button id="activ">Activity feed</button>
-				<button id="userProf">User Profiles</button>
-				<button id="textSearch">Text searching</button>
-				<button id="fileUp">File uploading</button>
-				<button id="multiSup">Multilingual support</button>
+				<a href="#dates"><button id="dash">Dashboard</button></a>
+				<a href="#dates"><button id="activ">Activity feed</button></a>
+				<a href="#dates"><button id="userProf">User Profiles</button></a>
+				<a href="#dates"><button id="textSearch">Text searching</button></a>
+				<a href="#dates"><button id="fileUp">File uploading</button></a>
+				<a href="#dates"><button id="multiSup">Multilingual support</button></a>
+			</div>
 			</div>
 		</div>
+		
 		<div class="container" id="dates">
+			<header>
+				<a href="#ff" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+				<div id="cost">
+					<p>Rough Estimate</p>
+					<p id="price">$150</p>
+				</div>
+			</header>
+			<div class="block">
 			<h4>Dates &#38; Location</h4>
 			<div class="but">
-				<button id="geo">Geolocation</button>
-				<button id="map">Custom map makers</button>
-				<button id="booking">Booking</button>
-				<button id="calendar">Sheduling/Calendar</button>
+				<a href="#social"><button id="geo">Geolocation</button></a>
+				<a href="#social"><button id="map">Custom map makers</button></a>
+				<a href="#social"><button id="booking">Booking</button></a>
+				<a href="#social"><button id="calendar">Sheduling/Calendar</button></a>
+			</div>
 			</div>
 		</div>
+		
 		<div class="container" id="social">
+			<header>
+				<a href="#dates" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+				<div id="cost">
+					<p>Rough Estimate</p>
+					<p id="price">$150</p>
+				</div>
+			</header>
+			<div class="block">
 			<h4>Social &#38; Engagement</h4>
 			<div class="but">
-				<button id="masseg">Messaging</button>
-				<button id="socShare">Social sharing</button>
-				<button id="forums">Forums or commenting</button>
-				<button id="push">Push notifications</button>
-				<button id="rating">Rating system</button>
+				<a href="#ecom"><button id="masseg">Messaging</button></a>
+				<a href="#ecom"><button id="socShare">Social sharing</button></a>
+				<a href="#ecom"><button id="forums">Forums or commenting</button></a>
+				<a href="#ecom"><button id="push">Push notifications</button></a>
+				<a href="#ecom"><button id="rating">Rating system</button></a>
+			</div>
 			</div>
 		</div>
+		
 		<div class="container" id="ecom">
+			<header>
+				<a href="#social" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+				<div id="cost">
+					<p>Rough Estimate</p>
+					<p id="price">$150</p>
+				</div>
+			</header>
+			<div class="block">
 			<h4>Billing &#38; eCommerce</h4>
 			<div class="but">
-				<button id="payment">Payment processing</button>
-				<button id="shopping">Shopping cart</button>
-				<button id="marketplace">User marketplace</button>
+				<a href="#media"><button id="payment">Payment processing</button></a>
+				<a href="#media"><button id="shopping">Shopping cart</button></a>
+				<a href="#media"><button id="marketplace">User marketplace</button></a>
+			</div>
 			</div>
 		</div>
+	
 		<div class="container" id="media">
+			<header>
+				<a href="#ecom" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+				<div id="cost">
+					<p>Rough Estimate</p>
+					<p id="price">$150</p>
+				</div>
+			</header>
+			<div class="block">
 			<h4>Used Multimedia</h4>
 			<div class="but">
-				<button id="video">Video</button>
-				<button id="audio">Audio</button>
-				<button id="photo">Photo</button>
+				<a href="#admin"><button id="video">Video</button></a>
+				<a href="#admin"><button id="audio">Audio</button></a>
+				<a href="#admin"><button id="photo">Photo</button></a>
+			</div>
 			</div>
 		</div>
+		
 		<div class="container" id="admin">
+			<header>
+				<a href="#media" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+				<div id="cost">
+					<p>Rough Estimate</p>
+					<p id="price">$150</p>
+				</div>
+			</header>
+			<div class="block">
 			<h4>Administration &#38; Analytics</h4>
 			<div class="but">
-				<button id="cms">CMS integration</button>
-				<button id="userAdmin">Users administration</button>
-				<button id="monitoring">Performance monitoring &#38; reporting</button>
-				<button id="payAdmin">Payment administration</button>
+				<a href="#security"><button id="cms">CMS integration</button></a>
+				<a href="#security"><button id="userAdmin">Users administration</button></a>
+				<a href="#security"><button id="monitoring">Performance monitoring &#38; reporting</button></a>
+				<a href="#security"><button id="payAdmin">Payment administration</button></a>
+			</div>
 			</div>
 		</div>
+		
 		<div class="container" id="security">
-			<h4>Security &#38; Reliability</h4>
-			<div class="but">
-				<button id="role">Role-based access</button>
-				<button id="data">Data protection</button>
-				<button id="privecy">User privacy setting</button>
+			<header>
+				<a href="#admin" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+				<div id="cost">
+					<p>Rough Estimate</p>
+					<p id="price">$150</p>
+				</div>
+			</header>
+			<div class="block">
+				<h4>Security &#38; Reliability</h4>
+				<div class="but">
+				<a href="#estimate"><button id="role">Role-based access</button></a>
+				<a href="#estimate"><button id="data">Data protection</button></a>
+				<a href="#estimate"><button id="privecy">User privacy setting</button></a>
+			</div>
 			</div>
 		</div>
-		<div class="container" id="estimate">
+		<div class="title" id="estimate">
 			<h3>Want to get detailed estimate</h3>
 			<p>Just write us your name and email</p>
 			<form>
