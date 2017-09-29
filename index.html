@@ -1,252 +1,333 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <title>Cost calculator</title>
+    <link rel="shortcut icon" href="assets/image/icons/calculator.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
+
 <body>
-	<main>
-		<div class="title" id="first">
-			<h3>Thinking to build a mobile app?</h3>
-			<p>Find out how much you'll pay for developing mobile application. Mobile aplication development cost calculator helps you to estimate your expence &#38; to stay on budget.</p>
-			<div>
-			<a href="#os""><button id="get">Get an Estimate</button></a>
-			</div>
-		</div>
-		
-		<div class="container" id="os">
-			<header>
-				<p id="prev"></p>
-				<div id="cost">
-				<p>Rough Estimate</p>
-				<p id="price">$150</p>
-				</div>
-			</header>
-			<div class="block">
-			<h4>Mobile Operation System</h4>
-			<div class="but">
-				<a href="#screen"><button id="android">Android</button></a>
-				<a href="#screen"><button id="ios">IOS</button></a>
-				<a href="#screen"><button id="both">iOS + Andropid<br>Cross-platform</button></a>
-			</div>
-			</div>
-		</div>
-		
-		<div class="container" id="screen">
-			<header>
-				<a href="#os" id="prev"><img src="image/arrow.png">Previous Quastion</a>
-				<div id="cost">
-					<p>Rough Estimate</p>
-					<p id="price">$150</p>
-				</div>
-			</header>
-			<div class="block">
-			<h4>Number of Screens</h4>
-			<div class="but">
-				<a href="#design"><button id="sm">2-8</button></a>
-				<a href="#design"><button id="md">9-15</button></a>
-				<a href="#design"><button id="bg">16-20</button></a>
-				<a href="#design"><button id="lg">21+</button></a>
-			</div>
-			</div>
-		</div>
-	
-		<div class="container" id="design">
-			<header>
-				<a href="#screen" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
-				<div id="cost">
-					<p>Rough Estimate</p>
-					<p id="price">$150</p>
-				</div>
-			</header>
-			<div class="block">
-			<h4>User Interface Design</h4>
-			<div class="but">
-				<a href="#api"><button id ="stock">Stock Design</button></a>
-				<a href="#api"><button id="custom">Custom Design</button></a>
-				<a href="#api"><button id="animated">Animated UI</button></a>
-			</div>
-			</div>
-		</div>
-		
-		<div class="container" id="api">
-			<header>
-				<a href="#design" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
-				<div id="cost">
-					<p>Rough Estimate</p>
-					<p id="price">$150</p>
-				</div>
-			</header>
-			<div class="block">
-			<h4>APIs &#38; Integration</h4>
-			<div class="but">
-				<a href="#aa"><button id="with">App with Api</button></a>
-				<a href="#aa"><button id="simple">Simple API without accounts</button></a>
-				<a href="#aa"><button id="advanced">Advanced API</button></a>
-			</div>
-		</div>
-		</div>
-		
-		<div class="container" id="aa">
-			<header>
-				<a href="#api" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
-				<div id="cost">
-					<p>Rough Estimate</p>
-					<p id="price">$150</p>
-				</div>
-			</header>
-			<div class="block">
-			<h4>Authentication &#38; Authorization</h4>
-			<div class="but">
-				<a href="#ff"><button id="email">Email logging</button></a>
-				<a href="#ff"><button id="soc">Social logging</button></a>
-				<a href="#ff"><button id="twoFactor">Two-factor authentication</button></a>
-			</div>
-			</div>
-		</div>
-		
-		<div class="container" id="ff">
-			<header>
-				<a href="#aa" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
-				<div id="cost">
-					<p>Rough Estimate</p>
-					<p id="price">$150</p>
-				</div>
-			</header>
-			<div class="block">
-			<h4>Functionality &#38; Features</h4>
-			<div class="but">
-				<a href="#dates"><button id="dash">Dashboard</button></a>
-				<a href="#dates"><button id="activ">Activity feed</button></a>
-				<a href="#dates"><button id="userProf">User Profiles</button></a>
-				<a href="#dates"><button id="textSearch">Text searching</button></a>
-				<a href="#dates"><button id="fileUp">File uploading</button></a>
-				<a href="#dates"><button id="multiSup">Multilingual support</button></a>
-			</div>
-			</div>
-		</div>
-		
-		<div class="container" id="dates">
-			<header>
-				<a href="#ff" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
-				<div id="cost">
-					<p>Rough Estimate</p>
-					<p id="price">$150</p>
-				</div>
-			</header>
-			<div class="block">
-			<h4>Dates &#38; Location</h4>
-			<div class="but">
-				<a href="#social"><button id="geo">Geolocation</button></a>
-				<a href="#social"><button id="map">Custom map makers</button></a>
-				<a href="#social"><button id="booking">Booking</button></a>
-				<a href="#social"><button id="calendar">Sheduling/Calendar</button></a>
-			</div>
-			</div>
-		</div>
-		
-		<div class="container" id="social">
-			<header>
-				<a href="#dates" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
-				<div id="cost">
-					<p>Rough Estimate</p>
-					<p id="price">$150</p>
-				</div>
-			</header>
-			<div class="block">
-			<h4>Social &#38; Engagement</h4>
-			<div class="but">
-				<a href="#ecom"><button id="masseg">Messaging</button></a>
-				<a href="#ecom"><button id="socShare">Social sharing</button></a>
-				<a href="#ecom"><button id="forums">Forums or commenting</button></a>
-				<a href="#ecom"><button id="push">Push notifications</button></a>
-				<a href="#ecom"><button id="rating">Rating system</button></a>
-			</div>
-			</div>
-		</div>
-		
-		<div class="container" id="ecom">
-			<header>
-				<a href="#social" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
-				<div id="cost">
-					<p>Rough Estimate</p>
-					<p id="price">$150</p>
-				</div>
-			</header>
-			<div class="block">
-			<h4>Billing &#38; eCommerce</h4>
-			<div class="but">
-				<a href="#media"><button id="payment">Payment processing</button></a>
-				<a href="#media"><button id="shopping">Shopping cart</button></a>
-				<a href="#media"><button id="marketplace">User marketplace</button></a>
-			</div>
-			</div>
-		</div>
-	
-		<div class="container" id="media">
-			<header>
-				<a href="#ecom" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
-				<div id="cost">
-					<p>Rough Estimate</p>
-					<p id="price">$150</p>
-				</div>
-			</header>
-			<div class="block">
-			<h4>Used Multimedia</h4>
-			<div class="but">
-				<a href="#admin"><button id="video">Video</button></a>
-				<a href="#admin"><button id="audio">Audio</button></a>
-				<a href="#admin"><button id="photo">Photo</button></a>
-			</div>
-			</div>
-		</div>
-		
-		<div class="container" id="admin">
-			<header>
-				<a href="#media" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
-				<div id="cost">
-					<p>Rough Estimate</p>
-					<p id="price">$150</p>
-				</div>
-			</header>
-			<div class="block">
-			<h4>Administration &#38; Analytics</h4>
-			<div class="but">
-				<a href="#security"><button id="cms">CMS integration</button></a>
-				<a href="#security"><button id="userAdmin">Users administration</button></a>
-				<a href="#security"><button id="monitoring">Performance monitoring &#38; reporting</button></a>
-				<a href="#security"><button id="payAdmin">Payment administration</button></a>
-			</div>
-			</div>
-		</div>
-		
-		<div class="container" id="security">
-			<header>
-				<a href="#admin" id="prev"><img src="image/arrow.png"><p>Previous Quastion</p></a>
-				<div id="cost">
-					<p>Rough Estimate</p>
-					<p id="price">$150</p>
-				</div>
-			</header>
-			<div class="block">
-				<h4>Security &#38; Reliability</h4>
-				<div class="but">
-				<a href="#estimate"><button id="role">Role-based access</button></a>
-				<a href="#estimate"><button id="data">Data protection</button></a>
-				<a href="#estimate"><button id="privecy">User privacy setting</button></a>
-			</div>
-			</div>
-		</div>
-		<div class="title" id="estimate">
-			<h3>Want to get detailed estimate</h3>
-			<p>Just write us your name and email</p>
-			<form>
-				<input type="text" name="name" value="Name">
-				<input type="mail" name="mail" value="Email">
-				<input type="button" name="" value="Get Estimate">
-			</form>
-		</div>
-	</main>
-<script type="text/javascript" src="calc.js"></script>
+    <main>
+        <div class="main-page">
+            <h3>Thinking to build a mobile app?</h3>
+            <p>Find out how much you'll pay for developing mobile application. Mobile aplication development cost calculator helps you to estimate your expence &#38; to stay on budget.</p>
+            <a href="#mobileOperatingSystem">
+                <button class="start-button">Get an Estimate</button>
+            </a>
+        </div>
+        <div class="container mob-operating-system" id="mobileOperatingSystem">
+            <header>
+                <p class="previous-button"></p>
+                <div class="rough-estimate">
+                    <p>Rough Estimate</p>
+                    <p>$150</p>
+                </div>
+            </header>
+            <div class="page-wrapper">
+                <h4>Mobile Operating System</h4>
+                <div class="buttons-wrapper">
+                    <a href="#screens">
+                        <button>Android</button>
+                    </a>
+                    <a href="#screens">
+                        <button>IOS</button>
+                    </a>
+                    <a href="#screens">
+                        <button>iOS + Andropid
+                            <br>Cross-platform</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container number-of-screens" id="screens">
+            <header>
+                <a href="#mobileOperatingSystem" class="previous-button"><img src="image/arrow.png">Previous Quastion</a>
+                <div class="rough-estimate">
+                    <p>Rough Estimate</p>
+                    <p>$150</p>
+                </div>
+            </header>
+            <div class="page-wrapper">
+                <h4>Number of Screens</h4>
+                <div class="buttons-wrapper">
+                    <a href="#design">
+                        <button>2-8</button>
+                    </a>
+                    <a href="#design">
+                        <button>9-15</button>
+                    </a>
+                    <a href="#design">
+                        <button>16-20</button>
+                    </a>
+                    <a href="#design">
+                        <button>21+</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container interface-design" id="design">
+            <header>
+                <a href="#screen" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <div class="rough-estimate">
+                    <p>Rough Estimate</p>
+                    <p>$150</p>
+                </div>
+            </header>
+            <div class="page-wrapper">
+                <h4>User Interface Design</h4>
+                <div class="buttons-wrapper">
+                    <a href="#api">
+                        <button>Stock Design</button>
+                    </a>
+                    <a href="#api">
+                        <button>Custom Design</button>
+                    </a>
+                    <a href="#api">
+                        <button>Animated UI</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container api-integrations" id="api">
+            <header>
+                <a href="#design" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <div class="rough-estimate">
+                    <p>Rough Estimate</p>
+                    <p>$150</p>
+                </div>
+            </header>
+            <div class="page-wrapper">
+                <h4>APIs &#38; Integration</h4>
+                <div class="buttons-wrapper">
+                    <a href="#authorization">
+                        <button>App with Api</button>
+                    </a>
+                    <a href="#authorization">
+                        <button>Simple API without accounts</button>
+                    </a>
+                    <a href="#authorization">
+                        <button>Advanced API</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container authentication" id="authorization">
+            <header>
+                <a href="#api" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <div class="rough-estimate">
+                    <p>Rough Estimate</p>
+                    <p>$150</p>
+                </div>
+            </header>
+            <div class="page-wrapper">
+                <h4>Authentication &#38; Authorization</h4>
+                <div class="buttons-wrapper">
+                    <a href="#features">
+                        <button>Email logging</button>
+                    </a>
+                    <a href="#features">
+                        <button>Social logging</button>
+                    </a>
+                    <a href="#features">
+                        <button>Two-factor authentication</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container functionality-features" id="features">
+            <header>
+                <a href="#authorization" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <div class="rough-estimate">
+                    <p>Rough Estimate</p>
+                    <p>$150</p>
+                </div>
+            </header>
+            <div class="page-wrapper">
+                <h4>Functionality &#38; Features</h4>
+                <div class="buttons-wrapper">
+                    <a href="#dates">
+                        <button>Dashboard</button>
+                    </a>
+                    <a href="#dates">
+                        <button>Activity feed</button>
+                    </a>
+                    <a href="#dates">
+                        <button>User Profiles</button>
+                    </a>
+                    <a href="#dates">
+                        <button>Text searching</button>
+                    </a>
+                    <a href="#dates">
+                        <button>File uploading</button>
+                    </a>
+                    <a href="#dates">
+                        <button>Multilingual support</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container dates-location" id="dates">
+            <header>
+                <a href="#features" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <div class="rough-estimate">
+                    <p>Rough Estimate</p>
+                    <p>$150</p>
+                </div>
+            </header>
+            <div class="page-wrapper">
+                <h4>Dates &#38; Location</h4>
+                <div class="buttons-wrapper">
+                    <a href="#social">
+                        <button>Geolocation</button>
+                    </a>
+                    <a href="#social">
+                        <button>Custom map makers</button>
+                    </a>
+                    <a href="#social">
+                        <button>Booking</button>
+                    </a>
+                    <a href="#social">
+                        <button>Sheduling/Calendar</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container social-engagement" id="social">
+            <header>
+                <a href="#dates" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <div class="rough-estimate">
+                    <p>Rough Estimate</p>
+                    <p>$150</p>
+                </div>
+            </header>
+            <div class="page-wrapper">
+                <h4>Social &#38; Engagement</h4>
+                <div class="buttons-wrapper">
+                    <a href="#billing">
+                        <button>Messaging</button>
+                    </a>
+                    <a href="#billing">
+                        <button>Social sharing</button>
+                    </a>
+                    <a href="#billing">
+                        <button>Forums or commenting</button>
+                    </a>
+                    <a href="#billing">
+                        <button>Push notifications</button>
+                    </a>
+                    <a href="#billing">
+                        <button>Rating system</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container billing-ecommers" id="billing">
+            <header>
+                <a href="#social" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <div class="rough-estimate">
+                    <p>Rough Estimate</p>
+                    <p>$150</p>
+                </div>
+            </header>
+            <div class="page-wrapper">
+                <h4>Billing &#38; eCommerce</h4>
+                <div class="buttons-wrapper">
+                    <a href="#multimedia">
+                        <button>Payment processing</button>
+                    </a>
+                    <a href="#multimedia">
+                        <button>Shopping cart</button>
+                    </a>
+                    <a href="#multimedia">
+                        <button>User marketplace</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container used-multimedia" id="multimedia">
+            <header>
+                <a href="#billing" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <div class="rough-estimate">
+                    <p>Rough Estimate</p>
+                    <p>$150</p>
+                </div>
+            </header>
+            <div class="page-wrapper">
+                <h4>Used Multimedia</h4>
+                <div class="buttons-wrapper">
+                    <a href="#analytics">
+                        <button>Video</button>
+                    </a>
+                    <a href="#analytics">
+                        <button>Audio</button>
+                    </a>
+                    <a href="#analytics">
+                        <button>Photo</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container administration-analitics" id="analytics">
+            <header>
+                <a href="#multimedia" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <div class="rough-estimate">
+                    <p>Rough Estimate</p>
+                    <p>$150</p>
+                </div>
+            </header>
+            <div class="page-wrapper">
+                <h4>Administration &#38; Analytics</h4>
+                <div class="buttons-wrapper">
+                    <a href="#security">
+                        <button>CMS integration</button>
+                    </a>
+                    <a href="#security">
+                        <button>Users administration</button>
+                    </a>
+                    <a href="#security">
+                        <button>Performance monitoring &#38; reporting</button>
+                    </a>
+                    <a href="#security">
+                        <button>Payment administration</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container security-reliability" id="security">
+            <header>
+                <a href="#analytics" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <div class="rough-estimate">
+                    <p>Rough Estimate</p>
+                    <p>$150</p>
+                </div>
+            </header>
+            <div class="page-wrapper">
+                <h4>Security &#38; Reliability</h4>
+                <div class="buttons-wrapper">
+                    <a href="#estimate">
+                        <button>Role-based access</button>
+                    </a>
+                    <a href="#estimate">
+                        <button>Data protection</button>
+                    </a>
+                    <a href="#estimate">
+                        <button>User privacy setting</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="final-page" id="estimate">
+            <h3>Want to get detailed estimate</h3>
+            <p>Just write us your name and email</p>
+            <form>
+                <input type="text" name="name" value="Name">
+                <input type="mail" name="mail" value="Email">
+                <input type="button" name="" value="Get Estimate">
+            </form>
+        </div>
+    </main>
+    <script type="text/javascript" src="assets/js/calc.js"></script>
 </body>
+
 </html>
