@@ -1,0 +1,886 @@
+var android = {
+    "hourcost": 28,
+    "screenNumbers":
+    {
+
+        "small":
+        {
+            "userInterfaceDesign":
+            {
+                "stock": 8,
+                "custom": 24,
+                "animated": 30,
+            },
+            "apiIntegration":
+            {
+                "whithoutApi": 8,
+                "simplApi": 8,
+                "advancedApi": 32,
+            },
+            "authentication":
+            {
+                "emai": 9,
+                "social": 16,
+                "twoFactor": 12,
+            },
+            "features":
+            {
+                "dashboard": 9,
+                "activityFeed": 9,
+                "userProfiles": 9,
+                "textSearching": 9,
+                "fileUpload": 16,
+                "multilingualSupport": 9,
+            },
+            "datesLocation":
+            {
+                "geolocation": 9,
+                "customMap": 18,
+                "booking": 8,
+                "sheduling": 18,
+            },
+            "socialEngagment":
+            {
+                "messaging": 40,
+                "socialSharing": 9,
+                "forumsOrCommenting": 9,
+                "pushNotifications": 24,
+                "ratingSystem": 16,
+            },
+            "billingEcommerce":
+            {
+                "paymentProcces": 24,
+                "shoppingCart": 16,
+                "userMarketplace": 12,
+            },
+            "usedMultimedia":
+            {
+                "video": 24,
+                "audio": 40,
+                "photo": 40,
+            },
+            "administrationAnaltics":
+            {
+                "cmsIntegration": 60,
+                "usersAdministration": 50,
+                "PerformanceMonitoring": 8,
+                "paymentAdministration": 24,
+            },
+            "securityReliability":
+            {
+                "roleBased": 16,
+                "dataProtection": 10,
+                "twoFactorAuthentification": 9,
+                "userPrivecySetting": 16,
+            },
+        },
+
+        "medium":
+        {
+            "userInterfaceDesign":
+            {
+                "stock": 16,
+                "custom": 32,
+                "animated": 37,
+            },
+            "apiIntegration":
+            {
+                "whithoutApi": 16,
+                "simpleApi": 18,
+                "advancedApi": 48,
+            },
+            "authentication":
+            {
+                "emai": 9,
+                "social": 18,
+                "twoFactor": 17,
+            },
+            "features":
+            {
+                "dashboard": 11,
+                "activityFeed": 11,
+                "userProfiles": 11,
+                "textSearching": 11,
+                "fileUpload": 18,
+                "multilingualSupport": 11,
+            },
+            "datesLocation":
+            {
+                "geolocation": 11,
+                "customMap": 20,
+                "booking": 19,
+                "sheduling": 20,
+            },
+            "socialEngagment":
+            {
+                "messaging": 53,
+                "socialSharing": 11,
+                "forumsOrCommenting": 11,
+                "pushNotifications": 29,
+                "ratingSystem": 19,
+            },
+            "billingEcommerce":
+            {
+                "paymentProcces": 29,
+                "shoppingCart": 19,
+                "userMarketplace": 14,
+            },
+            "usedMultimedia":
+            {
+                "video": 42,
+                "audio": 53,
+                "photo": 53,
+            },
+            "administrationAnaltics":
+            {
+                "cmsIntegration": 73,
+                "usersAdministration": 63,
+                "PerformanceMonitoring": 19,
+                "paymentAdministration": 43,
+            },
+            "securityReliability":
+            {
+                "roleBased": 20,
+                "dataProtection": 12,
+                "twoFactorAuthentification": 11,
+                "userPrivecySetting": 21,
+            },
+        },
+
+        "medium2":
+        {
+            "userInterfaceDesign":
+            {
+                "stock": 23,
+                "custom": 40,
+                "animated": 44,
+            },
+            "apiIntegration":
+            {
+                "whithoutApi": 24,
+                "simpleApi": 31,
+                "advancedApi": 64,
+            },
+            "authentication":
+            {
+                "emai": 9,
+                "social": 19,
+                "twoFactor": 22,
+            },
+            "features":
+            {
+                "dashboard": 13,
+                "activityFeed": 13,
+                "userProfiles": 13,
+                "textSearching": 13,
+                "fileUpload": 21,
+                "multilingualSupport": 13,
+            },
+            "datesLocation":
+            {
+                "geolocation": 13,
+                "customMap": 22,
+                "booking": 29,
+                "sheduling": 22,
+            },
+            "socialEngagment":
+            {
+                "messaging": 67,
+                "socialSharing": 13,
+                "forumsOrCommenting": 13,
+                "pushNotifications": 35,
+                "ratingSystem": 21,
+            },
+            "billingEcommerce":
+            {
+                "paymentProcces": 35,
+                "shoppingCart": 21,
+                "userMarketplace": 17,
+            },
+            "usedMultimedia":
+            {
+                "video": 62,
+                "audio": 67,
+                "photo": 67,
+            },
+            "administrationAnaltics":
+            {
+                "cmsIntegration": 87,
+                "usersAdministration": 77,
+                "PerformanceMonitoring": 29,
+                "paymentAdministration": 61,
+            },
+            "securityReliability":
+            {
+                "roleBased": 24,
+                "dataProtection": 14,
+                "twoFactorAuthentification": 14,
+                "userPrivecySetting": 27,
+            },
+        },
+
+        "large":
+        {
+            "userInterfaceDesign":
+            {
+                "stock": 30,
+                "custom": 48,
+                "animated": 50,
+            },
+            "apiIntegration":
+            {
+                "whithoutApi": 32,
+                "simpleApi": 40,
+                "advancedApi": 80,
+            },
+            "authentication":
+            {
+                "emai": 9,
+                "social": 20,
+                "twoFactor": 28,
+            },
+            "features":
+            {
+                "dashboard": 16,
+                "activityFeed": 16,
+                "userProfiles": 16,
+                "textSearching": 16,
+                "fileUpload": 24,
+                "multilingualSupport": 16,
+            },
+            "datesLocation":
+            {
+                "geolocation": 16,
+                "customMap": 24,
+                "booking": 40,
+                "sheduling": 24,
+            },
+            "socialEngagment":
+            {
+                "messaging": 80,
+                "socialSharing": 16,
+                "forumsOrCommenting": 16,
+                "pushNotifications": 40,
+                "ratingSystem": 24,
+            },
+            "billingEcommerce":
+            {
+                "paymentProcces": 40,
+                "shoppingCart": 24,
+                "userMarketplace": 20,
+            },
+            "usedMultimedia":
+            {
+                "video": 80,
+                "audio": 80,
+                "photo": 80,
+            },
+            "administrationAnaltics":
+            {
+                "cmsIntegration": 100,
+                "usersAdministration": 90,
+                "PerformanceMonitoring": 40,
+                "paymentAdministration": 80,
+            },
+            "securityReliability":
+            {
+                "roleBased": 28,
+                "dataProtection": 16,
+                "twoFactorAuthentification": 16,
+                "userPrivecySetting": 32,
+            },
+        }
+    }
+}
+
+
+
+var ios = {
+    "hourcost": 28,
+    "screenNumbers":
+    {
+
+        "small":
+        {
+            "userInterfaceDesign":
+            {
+                "stock": 8,
+                "custom": 24,
+                "animated": 30,
+            },
+            "apiIntegration":
+            {
+                "whithoutApi": 8,
+                "simplApi": 8,
+                "advancedApi": 32,
+            },
+            "authentication":
+            {
+                "emai": 9,
+                "social": 16,
+                "twoFactor": 12,
+            },
+            "features":
+            {
+                "dashboard": 9,
+                "activityFeed": 9,
+                "userProfiles": 9,
+                "textSearching": 9,
+                "fileUpload": 16,
+                "multilingualSupport": 9,
+            },
+            "datesLocation":
+            {
+                "geolocation": 9,
+                "customMap": 18,
+                "booking": 16,
+                "sheduling": 18,
+            },
+            "socialEngagment":
+            {
+                "messaging": 40,
+                "socialSharing": 9,
+                "forumsOrCommenting": 9,
+                "pushNotifications": 24,
+                "ratingSystem": 16,
+            },
+            "billingEcommerce":
+            {
+                "paymentProcces": 24,
+                "shoppingCart": 16,
+                "userMarketplace": 16,
+            },
+            "usedMultimedia":
+            {
+                "video": 32,
+                "audio": 40,
+                "photo": 40,
+            },
+            "administrationAnaltics":
+            {
+                "cmsIntegration": 60,
+                "usersAdministration": 50,
+                "PerformanceMonitoring": 8,
+                "paymentAdministration": 32,
+            },
+            "securityReliability":
+            {
+                "roleBased": 16,
+                "dataProtection": 10,
+                "twoFactorAuthentification": 9,
+                "userPrivecySetting": 16,
+            },
+        },
+
+        "medium":
+        {
+            "userInterfaceDesign":
+            {
+                "stock": 16,
+                "custom": 32,
+                "animated": 37,
+            },
+            "apiIntegration":
+            {
+                "whithoutApi": 16,
+                "simpleApi": 18,
+                "advancedApi": 48,
+            },
+            "authentication":
+            {
+                "emai": 9,
+                "social": 18,
+                "twoFactor": 17,
+            },
+            "features":
+            {
+                "dashboard": 11,
+                "activityFeed": 11,
+                "userProfiles": 11,
+                "textSearching": 11,
+                "fileUpload": 18,
+                "multilingualSupport": 11,
+            },
+            "datesLocation":
+            {
+                "geolocation": 11,
+                "customMap": 20,
+                "booking": 24,
+                "sheduling": 20,
+            },
+            "socialEngagment":
+            {
+                "messaging": 53,
+                "socialSharing": 11,
+                "forumsOrCommenting": 11,
+                "pushNotifications": 29,
+                "ratingSystem": 19,
+            },
+            "billingEcommerce":
+            {
+                "paymentProcces": 29,
+                "shoppingCart": 19,
+                "userMarketplace": 19,
+            },
+            "usedMultimedia":
+            {
+                "video": 48,
+                "audio": 53,
+                "photo": 53,
+            },
+            "administrationAnaltics":
+            {
+                "cmsIntegration": 73,
+                "usersAdministration": 63,
+                "PerformanceMonitoring": 19,
+                "paymentAdministration": 51,
+            },
+            "securityReliability":
+            {
+                "roleBased": 20,
+                "dataProtection": 12,
+                "twoFactorAuthentification": 11,
+                "userPrivecySetting": 21,
+            },
+        },
+
+        "medium2":
+        {
+            "userInterfaceDesign":
+            {
+                "stock": 23,
+                "custom": 40,
+                "animated": 44,
+            },
+            "apiIntegration":
+            {
+                "whithoutApi": 24,
+                "simpleApi": 31,
+                "advancedApi": 64,
+            },
+            "authentication":
+            {
+                "emai": 9,
+                "social": 19,
+                "twoFactor": 22,
+            },
+            "features":
+            {
+                "dashboard": 13,
+                "activityFeed": 13,
+                "userProfiles": 13,
+                "textSearching": 13,
+                "fileUpload": 21,
+                "multilingualSupport": 13,
+            },
+            "datesLocation":
+            {
+                "geolocation": 13,
+                "customMap": 22,
+                "booking": 32,
+                "sheduling": 22,
+            },
+            "socialEngagment":
+            {
+                "messaging": 67,
+                "socialSharing": 13,
+                "forumsOrCommenting": 13,
+                "pushNotifications": 35,
+                "ratingSystem": 21,
+            },
+            "billingEcommerce":
+            {
+                "paymentProcces": 35,
+                "shoppingCart": 21,
+                "userMarketplace": 21,
+            },
+            "usedMultimedia":
+            {
+                "video": 64,
+                "audio": 67,
+                "photo": 67,
+            },
+            "administrationAnaltics":
+            {
+                "cmsIntegration": 87,
+                "usersAdministration": 77,
+                "PerformanceMonitoring": 29,
+                "paymentAdministration": 69,
+            },
+            "securityReliability":
+            {
+                "roleBased": 24,
+                "dataProtection": 14,
+                "twoFactorAuthentification": 14,
+                "userPrivecySetting": 27,
+            },
+        },
+
+        "large":
+        {
+            "userInterfaceDesign":
+            {
+                "stock": 30,
+                "custom": 48,
+                "animated": 50,
+            },
+            "apiIntegration":
+            {
+                "whithoutApi": 32,
+                "simpleApi": 40,
+                "advancedApi": 80,
+            },
+            "authentication":
+            {
+                "emai": 9,
+                "social": 20,
+                "twoFactor": 28,
+            },
+            "features":
+            {
+                "dashboard": 16,
+                "activityFeed": 16,
+                "userProfiles": 16,
+                "textSearching": 16,
+                "fileUpload": 24,
+                "multilingualSupport": 16,
+            },
+            "datesLocation":
+            {
+                "geolocation": 16,
+                "customMap": 24,
+                "booking": 40,
+                "sheduling": 24,
+            },
+            "socialEngagment":
+            {
+                "messaging": 80,
+                "socialSharing": 16,
+                "forumsOrCommenting": 16,
+                "pushNotifications": 40,
+                "ratingSystem": 24,
+            },
+            "billingEcommerce":
+            {
+                "paymentProcces": 40,
+                "shoppingCart": 24,
+                "userMarketplace": 24,
+            },
+            "usedMultimedia":
+            {
+                "video": 80,
+                "audio": 80,
+                "photo": 80,
+            },
+            "administrationAnaltics":
+            {
+                "cmsIntegration": 100,
+                "usersAdministration": 90,
+                "PerformanceMonitoring": 40,
+                "paymentAdministration": 88,
+            },
+            "securityReliability":
+            {
+                "roleBased": 28,
+                "dataProtection": 16,
+                "twoFactorAuthentification": 16,
+                "userPrivecySetting": 32,
+            },
+        }
+    }
+}
+
+var crossPlatform = {
+    "hourcost": 28,
+    "screenNumbers":
+    {
+
+        "small":
+        {
+            "userInterfaceDesign":
+            {
+                "stock": 16,
+                "custom": 40,
+                "animated": 48,
+            },
+            "apiIntegration":
+            {
+                "whithoutApi": 16,
+                "simplApi": 8,
+                "advancedApi": 32,
+            },
+            "authentication":
+            {
+                "emai": 9,
+                "social": 16,
+                "twoFactor": 24,
+            },
+            "features":
+            {
+                "dashboard": 18,
+                "activityFeed": 18,
+                "userProfiles": 18,
+                "textSearching": 18,
+                "fileUpload": 24,
+                "multilingualSupport": 16,
+            },
+            "datesLocation":
+            {
+                "geolocation": 18,
+                "customMap": 26,
+                "booking": 12,
+                "sheduling": 26,
+            },
+            "socialEngagment":
+            {
+                "messaging": 60,
+                "socialSharing": 15,
+                "forumsOrCommenting": 15,
+                "pushNotifications": 32,
+                "ratingSystem": 24,
+            },
+            "billingEcommerce":
+            {
+                "paymentProcces": 32,
+                "shoppingCart": 24,
+                "userMarketplace": 24,
+            },
+            "usedMultimedia":
+            {
+                "video": 60,
+                "audio": 60,
+                "photo": 80,
+            },
+            "administrationAnaltics":
+            {
+                "cmsIntegration": 100,
+                "usersAdministration": 90,
+                "PerformanceMonitoring": 12,
+                "paymentAdministration": 36,
+            },
+            "securityReliability":
+            {
+                "roleBased": 32,
+                "dataProtection": 16,
+                "twoFactorAuthentification": 16,
+                "userPrivecySetting": 32,
+            },
+        },
+
+        "medium":
+        {
+            "userInterfaceDesign":
+            {
+                "stock": 31,
+                "custom": 53,
+                "animated": 59,
+            },
+            "apiIntegration":
+            {
+                "whithoutApi": 32,
+                "simpleApi": 18,
+                "advancedApi": 48,
+            },
+            "authentication":
+            {
+                "emai": 9,
+                "social": 18,
+                "twoFactor": 35,
+            },
+            "features":
+            {
+                "dashboard": 23,
+                "activityFeed": 23,
+                "userProfiles": 23,
+                "textSearching": 23,
+                "fileUpload": 29,
+                "multilingualSupport": 19,
+            },
+            "datesLocation":
+            {
+                "geolocation": 23,
+                "customMap": 28,
+                "booking": 28,
+                "sheduling": 28,
+            },
+            "socialEngagment":
+            {
+                "messaging": 73,
+                "socialSharing": 17,
+                "forumsOrCommenting": 17,
+                "pushNotifications": 36,
+                "ratingSystem": 27,
+            },
+            "billingEcommerce":
+            {
+                "paymentProcces": 36,
+                "shoppingCart": 27,
+                "userMarketplace": 29,
+            },
+            "usedMultimedia":
+            {
+                "video": 73,
+                "audio": 73,
+                "photo": 107,
+            },
+            "administrationAnaltics":
+            {
+                "cmsIntegration": 127,
+                "usersAdministration": 117,
+                "PerformanceMonitoring": 28,
+                "paymentAdministration": 64,
+            },
+            "securityReliability":
+            {
+                "roleBased": 40,
+                "dataProtection": 19,
+                "twoFactorAuthentification": 19,
+                "userPrivecySetting": 43,
+            },
+        },
+
+        "medium2":
+        {
+            "userInterfaceDesign":
+            {
+                "stock": 47,
+                "custom": 67,
+                "animated": 69,
+            },
+            "apiIntegration":
+            {
+                "whithoutApi": 48,
+                "simpleApi": 31,
+                "advancedApi": 64,
+            },
+            "authentication":
+            {
+                "emai": 9,
+                "social": 19,
+                "twoFactor": 45,
+            },
+            "features":
+            {
+                "dashboard": 27,
+                "activityFeed": 27,
+                "userProfiles": 27,
+                "textSearching": 27,
+                "fileUpload": 35,
+                "multilingualSupport": 21,
+            },
+            "datesLocation":
+            {
+                "geolocation": 27,
+                "customMap": 30,
+                "booking": 44,
+                "sheduling": 30,
+            },
+            "socialEngagment":
+            {
+                "messaging": 87,
+                "socialSharing": 20,
+                "forumsOrCommenting": 20,
+                "pushNotifications": 41,
+                "ratingSystem": 29,
+            },
+            "billingEcommerce":
+            {
+                "paymentProcces": 41,
+                "shoppingCart": 30,
+                "userMarketplace": 35,
+            },
+            "usedMultimedia":
+            {
+                "video": 87,
+                "audio": 87,
+                "photo": 133,
+            },
+            "administrationAnaltics":
+            {
+                "cmsIntegration": 153,
+                "usersAdministration": 143,
+                "PerformanceMonitoring": 44,
+                "paymentAdministration": 92,
+            },
+            "securityReliability":
+            {
+                "roleBased": 48,
+                "dataProtection": 21,
+                "twoFactorAuthentification": 21,
+                "userPrivecySetting": 53,
+            },
+        },
+
+        "large":
+        {
+            "userInterfaceDesign":
+            {
+                "stock": 60,
+                "custom": 80,
+                "animated": 80,
+            },
+            "apiIntegration":
+            {
+                "whithoutApi": 64,
+                "simpleApi": 40,
+                "advancedApi": 80,
+            },
+            "authentication":
+            {
+                "emai": 9,
+                "social": 20,
+                "twoFactor": 56,
+            },
+            "features":
+            {
+                "dashboard": 32,
+                "activityFeed": 32,
+                "userProfiles": 32,
+                "textSearching": 32,
+                "fileUpload": 40,
+                "multilingualSupport": 24,
+            },
+            "datesLocation":
+            {
+                "geolocation": 32,
+                "customMap": 32,
+                "booking": 60,
+                "sheduling": 32,
+            },
+            "socialEngagment":
+            {
+                "messaging": 100,
+                "socialSharing": 22,
+                "forumsOrCommenting": 22,
+                "pushNotifications": 45,
+                "ratingSystem": 32,
+            },
+            "billingEcommerce":
+            {
+                "paymentProcces": 45,
+                "shoppingCart": 32,
+                "userMarketplace": 40,
+            },
+            "usedMultimedia":
+            {
+                "video": 100,
+                "audio": 100,
+                "photo": 160,
+            },
+            "administrationAnaltics":
+            {
+                "cmsIntegration": 180,
+                "usersAdministration": 170,
+                "PerformanceMonitoring": 60,
+                "paymentAdministration": 120,
+            },
+            "securityReliability":
+            {
+                "roleBased": 56,
+                "dataProtection": 24,
+                "twoFactorAuthentification": 24,
+                "userPrivecySetting": 64,
+            },
+        }
+    }
+}

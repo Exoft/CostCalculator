@@ -1,18 +1,3 @@
-// var first = {name:'first', get}
-// var os = {name:'os', android:24, ios:35, both:70};
-// var screen = {name:'screen', sm:24, md:55, bg:77, lg:100};
-// var design = {name:'design', stock:50, custom:150, animated:200};
-// var api = {name:'api', with:300, simple:500, advanced:700};
-// var aa = {name:'aa', email:150, soc:200, twoFactor:400};
-// var ff = {name:'ff', dash:100, activ:150, userProf:200, textSearch:250, fileUp:300, multiSup:500};
-// var dates = {name:'dates', geo:150, map:200, booking:250, calendar:300};
-// var social = {name:'social', masseg:50, socShare:75, forums:150, push:200, rating:100}
-// var ecom = {name:'ecom', payment:300, shopping:350, marketplace:300};
-// var media = {name:'media', video:100, audio:100, photo:50};
-// var admin = {name:'admin', cms:300, userAdmin:350, monitoring:400, payAdmin:450};
-// var security = {name:'security', role:300, data:250, privecy:300};
-// var estimate = {name:'estimate'}
-// var arr = [first, os, screen, design, api, aa, ff, dates, social, ecom, media, admin, security, estimate];
 
 // var price = 0;
 // var status;
