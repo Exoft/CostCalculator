@@ -12,7 +12,7 @@
         <div class="main-page">
             <h3>Thinking to build a mobile app?</h3>
             <p>Find out how much you'll pay for developing mobile application. Mobile aplication development cost calculator helps you to estimate your expence &#38; to stay on budget.</p>
-            <a href="#mobileOperatingSystem">
+            <a class="smoothScroll" href="#mobileOperatingSystem">
                 <button class="start-button">Get an Estimate</button>
             </a>
         </div>
@@ -27,14 +27,14 @@
             <div class="page-wrapper">
                 <h4>Mobile Operating System</h4>
                 <div class="buttons-wrapper">
-                    <a href="#screens">
-                        <button>Android</button>
+                    <a class="smoothScroll" href="#screens">
+                        <button id="android">Android</button>
                     </a>
-                    <a href="#screens">
-                        <button>IOS</button>
+                    <a class="smoothScroll" href="#screens">
+                        <button id="ios">IOS</button>
                     </a>
-                    <a href="#screens">
-                        <button>iOS + Andropid
+                    <a class="smoothScroll" href="#screens">
+                        <button id="crossPlatform">iOS + Andropid
                             <br>Cross-platform</button>
                     </a>
                 </div>
@@ -42,7 +42,7 @@
         </div>
         <div class="container number-of-screens" id="screens">
             <header>
-                <a href="#mobileOperatingSystem" class="previous-button"><img src="image/arrow.png">Previous Quastion</a>
+                <a href="#mobileOperatingSystem" class="previous-button"><img src="assets/image/icons/arrow.png"><p>Previous Quastion</p></a>
                 <div class="rough-estimate">
                     <p>Rough Estimate</p>
                     <p>$150</p>
@@ -51,24 +51,24 @@
             <div class="page-wrapper">
                 <h4>Number of Screens</h4>
                 <div class="buttons-wrapper">
-                    <a href="#design">
-                        <button>2-8</button>
+                    <a class="smoothScroll" href="#userInterfaceDesign">
+                        <button id="small">2-8</button>
                     </a>
-                    <a href="#design">
-                        <button>9-15</button>
+                    <a class="smoothScroll" href="#userInterfaceDesign">
+                        <button id="medium">9-15</button>
                     </a>
-                    <a href="#design">
-                        <button>16-20</button>
+                    <a class="smoothScroll" href="#userInterfaceDesign">
+                        <button id="medium2">16-20</button>
                     </a>
-                    <a href="#design">
-                        <button>21+</button>
+                    <a class="smoothScroll" href="#userInterfaceDesign">
+                        <button id="large">21+</button>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="container interface-design" id="design">
+        <div class="container interface-design" id="userInterfaceDesign">
             <header>
-                <a href="#screen" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <a href="#screen" class="previous-button smoothScroll"><img src="assets/image/icons/arrow.png"><p>Previous Quastion</p></a>
                 <div class="rough-estimate">
                     <p>Rough Estimate</p>
                     <p>$150</p>
@@ -77,21 +77,21 @@
             <div class="page-wrapper">
                 <h4>User Interface Design</h4>
                 <div class="buttons-wrapper">
-                    <a href="#api">
-                        <button>Stock Design</button>
+                    <a class="smoothScroll" href="#apiIntegration">
+                        <button id="stock">Stock Design</button>
                     </a>
-                    <a href="#api">
-                        <button>Custom Design</button>
+                    <a class="smoothScroll" href="#apiIntegration">
+                        <button id="custom">Custom Design</button>
                     </a>
-                    <a href="#api">
-                        <button>Animated UI</button>
+                    <a class="smoothScroll" href="#apiIntegration">
+                        <button id="animated">Animated UI</button>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="container api-integrations" id="api">
+        <div class="container api-integrations" id="apiIntegration">
             <header>
-                <a href="#design" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <a href="#userInterfaceDesign" class="previous-button"><img src="assets/image/icons/arrow.png"><p>Previous Quastion</p></a>
                 <div class="rough-estimate">
                     <p>Rough Estimate</p>
                     <p>$150</p>
@@ -100,21 +100,21 @@
             <div class="page-wrapper">
                 <h4>APIs &#38; Integration</h4>
                 <div class="buttons-wrapper">
-                    <a href="#authorization">
-                        <button>App with Api</button>
+                    <a class="smoothScroll" href="#authentication">
+                        <button id="whithoutApi">App with Api</button>
                     </a>
-                    <a href="#authorization">
-                        <button>Simple API without accounts</button>
+                    <a class="smoothScroll" href="#authentication">
+                        <button id="simpleApi">Simple API without accounts</button>
                     </a>
-                    <a href="#authorization">
-                        <button>Advanced API</button>
+                    <a class="smoothScroll" href="#authentication">
+                        <button id="advancedApi">Advanced API</button>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="container authentication" id="authorization">
+        <div class="container authentication" id="authentication">
             <header>
-                <a href="#api" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <a href="#apiIntegration" class="previous-button"><img src="assets/image/icons/arrow.png"><p>Previous Quastion</p></a>
                 <div class="rough-estimate">
                     <p>Rough Estimate</p>
                     <p>$150</p>
@@ -123,13 +123,13 @@
             <div class="page-wrapper">
                 <h4>Authentication &#38; Authorization</h4>
                 <div class="buttons-wrapper">
-                    <a href="#features">
+                    <a class="smoothScroll" href="#features">
                         <button>Email logging</button>
                     </a>
-                    <a href="#features">
+                    <a class="smoothScroll" href="#features">
                         <button>Social logging</button>
                     </a>
-                    <a href="#features">
+                    <a class="smoothScroll" href="#features">
                         <button>Two-factor authentication</button>
                     </a>
                 </div>
@@ -137,7 +137,7 @@
         </div>
         <div class="container functionality-features" id="features">
             <header>
-                <a href="#authorization" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <a href="#authentication" class="previous-button"><img src="assets/image/icons/arrow.png"><p>Previous Quastion</p></a>
                 <div class="rough-estimate">
                     <p>Rough Estimate</p>
                     <p>$150</p>
@@ -146,30 +146,30 @@
             <div class="page-wrapper">
                 <h4>Functionality &#38; Features</h4>
                 <div class="buttons-wrapper">
-                    <a href="#dates">
+                    <a class="smoothScroll" href="#datesLocation">
                         <button>Dashboard</button>
                     </a>
-                    <a href="#dates">
+                    <a class="smoothScroll" href="#datesLocation">
                         <button>Activity feed</button>
                     </a>
-                    <a href="#dates">
+                    <a class="smoothScroll" href="#datesLocation">
                         <button>User Profiles</button>
                     </a>
-                    <a href="#dates">
+                    <a class="smoothScroll" href="#datesLocation">
                         <button>Text searching</button>
                     </a>
-                    <a href="#dates">
+                    <a class="smoothScroll" href="#datesLocation">
                         <button>File uploading</button>
                     </a>
-                    <a href="#dates">
+                    <a class="smoothScroll" href="#datesLocation">
                         <button>Multilingual support</button>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="container dates-location" id="dates">
+        <div class="container dates-location" id="datesLocation">
             <header>
-                <a href="#features" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <a href="#features" class="previous-button"><img src="assets/image/icons/arrow.png"><p>Previous Quastion</p></a>
                 <div class="rough-estimate">
                     <p>Rough Estimate</p>
                     <p>$150</p>
@@ -178,24 +178,24 @@
             <div class="page-wrapper">
                 <h4>Dates &#38; Location</h4>
                 <div class="buttons-wrapper">
-                    <a href="#social">
+                    <a class="smoothScroll" href="#socialEngagment">
                         <button>Geolocation</button>
                     </a>
-                    <a href="#social">
+                    <a class="smoothScroll" href="#socialEngagment">
                         <button>Custom map makers</button>
                     </a>
-                    <a href="#social">
+                    <a class="smoothScroll" href="#socialEngagment">
                         <button>Booking</button>
                     </a>
-                    <a href="#social">
+                    <a class="smoothScroll" href="#socialEngagment">
                         <button>Sheduling/Calendar</button>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="container social-engagement" id="social">
+        <div class="container social-engagement" id="socialEngagment">
             <header>
-                <a href="#dates" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <a href="#datesLocation" class="previous-button"><img src="assets/image/icons/arrow.png"><p>Previous Quastion</p></a>
                 <div class="rough-estimate">
                     <p>Rough Estimate</p>
                     <p>$150</p>
@@ -204,27 +204,27 @@
             <div class="page-wrapper">
                 <h4>Social &#38; Engagement</h4>
                 <div class="buttons-wrapper">
-                    <a href="#billing">
+                    <a class="smoothScroll" href="#billingEcommerce">
                         <button>Messaging</button>
                     </a>
-                    <a href="#billing">
+                    <a class="smoothScroll" href="#billingEcommerce">
                         <button>Social sharing</button>
                     </a>
-                    <a href="#billing">
+                    <a class="smoothScroll" href="#billingEcommerce">
                         <button>Forums or commenting</button>
                     </a>
-                    <a href="#billing">
+                    <a class="smoothScroll" href="#billingEcommerce">
                         <button>Push notifications</button>
                     </a>
-                    <a href="#billing">
+                    <a class="smoothScroll" href="#billingEcommerce">
                         <button>Rating system</button>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="container billing-ecommers" id="billing">
+        <div class="container billing-ecommers" id="billingEcommerce">
             <header>
-                <a href="#social" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <a href="#socialEngagment" class="previous-button"><img src="assets/image/icons/arrow.png"><p>Previous Quastion</p></a>
                 <div class="rough-estimate">
                     <p>Rough Estimate</p>
                     <p>$150</p>
@@ -233,21 +233,21 @@
             <div class="page-wrapper">
                 <h4>Billing &#38; eCommerce</h4>
                 <div class="buttons-wrapper">
-                    <a href="#multimedia">
+                    <a class="smoothScroll" href="#usedMultimedia">
                         <button>Payment processing</button>
                     </a>
-                    <a href="#multimedia">
+                    <a class="smoothScroll" href="#usedMultimedia">
                         <button>Shopping cart</button>
                     </a>
-                    <a href="#multimedia">
+                    <a class="smoothScroll" href="#usedMultimedia">
                         <button>User marketplace</button>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="container used-multimedia" id="multimedia">
+        <div class="container used-multimedia" id="usedMultimedia">
             <header>
-                <a href="#billing" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <a href="#billingEcommerce" class="previous-button"><img src="assets/image/icons/arrow.png"><p>Previous Quastion</p></a>
                 <div class="rough-estimate">
                     <p>Rough Estimate</p>
                     <p>$150</p>
@@ -256,21 +256,21 @@
             <div class="page-wrapper">
                 <h4>Used Multimedia</h4>
                 <div class="buttons-wrapper">
-                    <a href="#analytics">
+                    <a class="smoothScroll" href="#administrationAnaltics">
                         <button>Video</button>
                     </a>
-                    <a href="#analytics">
+                    <a class="smoothScroll" href="#administrationAnaltics">
                         <button>Audio</button>
                     </a>
-                    <a href="#analytics">
+                    <a class="smoothScroll" href="#administrationAnaltics">
                         <button>Photo</button>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="container administration-analitics" id="analytics">
+        <div class="container administration-analitics" id="administrationAnaltics">
             <header>
-                <a href="#multimedia" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <a href="#usedMultimedia" class="previous-button"><img src="assets/image/icons/arrow.png"><p>Previous Quastion</p></a>
                 <div class="rough-estimate">
                     <p>Rough Estimate</p>
                     <p>$150</p>
@@ -279,24 +279,24 @@
             <div class="page-wrapper">
                 <h4>Administration &#38; Analytics</h4>
                 <div class="buttons-wrapper">
-                    <a href="#security">
+                    <a class="smoothScroll" href="#securityReliability">
                         <button>CMS integration</button>
                     </a>
-                    <a href="#security">
+                    <a class="smoothScroll" href="#securityReliability">
                         <button>Users administration</button>
                     </a>
-                    <a href="#security">
+                    <a class="smoothScroll" href="#securityReliability">
                         <button>Performance monitoring &#38; reporting</button>
                     </a>
-                    <a href="#security">
+                    <a class="smoothScroll" href="#securityReliability">
                         <button>Payment administration</button>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="container security-reliability" id="security">
+        <div class="container security-reliability" id="securityReliability">
             <header>
-                <a href="#analytics" class="previous-button"><img src="image/arrow.png"><p>Previous Quastion</p></a>
+                <a href="#administrationAnaltics" class="previous-button"><img src="assets/image/icons/arrow.png"><p>Previous Quastion</p></a>
                 <div class="rough-estimate">
                     <p>Rough Estimate</p>
                     <p>$150</p>
@@ -305,13 +305,13 @@
             <div class="page-wrapper">
                 <h4>Security &#38; Reliability</h4>
                 <div class="buttons-wrapper">
-                    <a href="#estimate">
+                    <a class="smoothScroll" href="#estimate">
                         <button>Role-based access</button>
                     </a>
-                    <a href="#estimate">
+                    <a class="smoothScroll" href="#estimate">
                         <button>Data protection</button>
                     </a>
-                    <a href="#estimate">
+                    <a class="smoothScroll" href="#estimate">
                         <button>User privacy setting</button>
                     </a>
                 </div>
@@ -320,14 +320,18 @@
         <div class="final-page" id="estimate">
             <h3>Want to get detailed estimate</h3>
             <p>Just write us your name and email</p>
-            <form>
-                <input type="text" name="name" value="Name">
-                <input type="mail" name="mail" value="Email">
+            <form name="getEstimateForm">
+                <input type="text" name="name" placeholder="Name">
+                <input type="email" name="mail" placeholder="Email">
                 <input type="button" name="" value="Get Estimate">
             </form>
         </div>
     </main>
-    <script type="text/javascript" src="assets/js/calc.js"></script>
+    <script src="assets/js/calc.js"></script>
+    <script src="assets/js/pricelist.json"></script>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/scroll.js"></script>
+
 </body>
 
 </html>

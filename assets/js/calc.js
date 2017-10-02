@@ -1,38 +1,77 @@
+var userName = getEstimateForm.name;
 
-// var price = 0;
-// var status;
+	userName.addEventListener('input', function () {
+	var name = this.value.replace(/[^A-Za-z]/g, '').substring(0,20);
+	this.value = name;
+ });
 
-// // document.getElementById('prev').addEventListener('click', function(){
-// // 	document.getElementById(pages[status]).style.display = "none";
-// // 	document.getElementById(pages[status-1]).style.display = "table-cell";
+var userEmail = getEstimateForm.mail;
 
-// // 	status -= 1;
-// // 	if (status<2) {
-// // 		document.getElementById('prev').style.visibility = "hidden";
-// // 	}
-// // });
+	userEmail.addEventListener('change', function () {
+		var email = this.value;
+		var patt = new RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
+			if (!patt.test(email)) {
+				alert("please, enter your email correctly")
+			}	
+	})
 
-// document.querySelector('main').addEventListener('click', function () {
-// 	var elem = event.target;
-// 	var par = elem.parentNode.parentNode.id;
+function loadJSON(callback) {   
 
-//  	for (var x = 0; x < arr.length; x++) {
-//  		if (par==arr[x].name) {
-// 			var a = Object.keys(arr[x]);
+    var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType(".pricelist.json");
+    xobj.open('GET', 'my_data.json', true); 
+    xobj.onreadystatechange = function () {
+          if (xobj.readyState == 4 && xobj.status == "200") {
+            
+            callback(xobj.responseText);
+          }
+    };
+    xobj.send(null);  
+ }
 
-// 			for (var i = 0; i < Object.keys(arr[x]).length; i++) {
-// 	 			if (elem.id==a[i]) {
-// 	 				var now = document.getElementById(arr[x].name);
-// 					var next = document.getElementById(arr[x+1].name);
+function init() {
+ loadJSON(function(response) {
+    var priceList = JSON.parse(response);
+ });
+}
 
-// 					now.style.display = "none";
-// 					next.style.display = "table-cell";
+var os;
+var screen;
+var hoursSumm = 0;
+var choiseMaded;
+var list;
 
-// 					// return status=i+1;
-// 	 				break;
-// 	 			};
-// 			}
-// 		}
-// 	}
-// });
+document.querySelector('button').addEventListener('click', function () {
+	var buttonOnClick = event.target;
+	var parentDiv = buttonOnClick.parentNode.parentNode.parentNode.parentNode.id;
+
+	if (parentDiv == 'mobileOperatingSystem') {
+		return os = buttonOnClick.id;
+	} else if (parentDiv == 'screens' && os) {
+		screen = buttonOnClick.id;
+		choiseMaded = price[os].screenNumbers[screen];
+		list = Object.getOwnPropertyNames(choiseMaded);
+		return choiseMaded, list, screen;
+	} else if (parentDiv) {
+	for (i=0; i < list.length ; i++) {			
+ 		
+ 		if (list[i] == parentDiv) {
+ 			
+ 			var newlist = Object.keys(choiseMaded[list[i]])
+
+			for (j=0; j< newlist.length; j++) {
+
+					var buttonList = choiseMaded[list[i]];
+					var arrbuttonList = Object.keys(buttonList);
+
+					if (buttonOnClick.id == arrbuttonList[j]) {
+
+						return hoursSumm += buttonList[buttonOnClick.id];
+					}
+				};
+			};
+		};
+	} 
+});
+
 

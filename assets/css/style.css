@@ -212,7 +212,17 @@ input:last-child {
 	justify-content: center;
 	text-align: center;
 	background-color: #1E1F3D;
-	background-image: url(image/estimatebg.png);
+	background-image: url(../image/backgrounds/estimatebg.png);
 	background-size: cover;
 	color: #fff;
+}
+
+@media only screen and (max-width: 500px) {
+	h3, h4{
+		font-size: 28px;
+	}
+
+	.main-page p {
+		font-size: 14px;
+	} 
 }
