@@ -8,6 +8,7 @@ a:hover,
 a {
   text-decoration: none;
   color: inherit;
+  cursor: default;
 }
 
 body {
@@ -57,6 +58,7 @@ header {
 
 .rough-estimate > p {
 	margin-bottom: 3px;
+	
 }
 
 .rough-estimate p:last-child {
@@ -125,6 +127,11 @@ button:focus {
 }
 
 button:hover {
+	background-color: #333685;
+	color: #fff;
+}
+
+.active-button {
 	background-color: #333685;
 	color: #fff;
 }

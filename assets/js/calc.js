@@ -35,16 +35,26 @@ function init() {
     });
 }
 
-var os;
-var screen;
-var hourCost;
-var hoursSumm = 0;
-var totalPrice;
-var choiseMaded;
-var list;
+var os, screen, screenchois = 0,
+    hourCost = 0,
+    hoursSumm = 1,
+    totalPrice, choiseMaded, list, keys = {};
 var nodeListTotalPrice = document.getElementsByClassName("total-price");
 
 function inner() {
+    var summ = 1;
+
+    for (var j = 0; j < Object.keys(keys).length; j++) {
+        choiseMaded = price[os].screenNumbers[screen];
+        var block = choiseMaded[Object.keys(keys)[j]];
+        var choise = block[Object.values(keys)[j]];
+        if (choise) { summ += choise; }
+    };
+
+    totalPrice = hourCost * (screenchois + summ);
+
+
+
     for (var i = 0; i < nodeListTotalPrice.length; i++) {
         nodeListTotalPrice[i].innerHTML = "$" + totalPrice;
     }
@@ -53,39 +63,68 @@ function inner() {
 document.querySelector('main').addEventListener('click', function() {
     var buttonOnClick = event.target;
     var parentDiv = buttonOnClick.parentNode.parentNode.parentNode.parentNode.id;
-
+    var linkStop = buttonOnClick.parentNode;
     if (!parentDiv) {
         return;
     } else if (parentDiv == 'mobileOperatingSystem') {
         os = buttonOnClick.id;
-        hourCost = price[os].hourcost;
-        totalPrice = hourCost;
-        inner();
+        if (buttonOnClick.classList.contains('active-button')) {
+            buttonOnClick.classList.remove('active-button');
+            linkStop.setAttribute('href', '#screens');
+            hourCost = 0;
+            inner();
+        } else {
+            buttonOnClick.classList.add('active-button');
+            hourCost = price[os].hourcost;
+            linkStop.setAttribute('href', '/');
+            inner();
+        }
     } else if (parentDiv == 'screens' && os) {
         screen = buttonOnClick.id;
-        choiseMaded = price[os].screenNumbers[screen];
-        list = Object.getOwnPropertyNames(choiseMaded);
-        totalPrice = hourCost * choiseMaded.userInterfaceDesign.stock;
-        inner();
+        choisenScreen = price[os].screenNumbers[screen];
+        list = Object.getOwnPropertyNames(choisenScreen);
+        if (buttonOnClick.classList.contains('active-button')) {
+            buttonOnClick.classList.remove('active-button');
+            linkStop.setAttribute('href', '#screens');
+            screenchois = 0;
+            inner();
+        } else {
+            buttonOnClick.classList.add('active-button');
+            screenchois = choisenScreen.userInterfaceDesign.stock;
+            linkStop.setAttribute('href', '/');
+            inner();
+        }
     } else if (parentDiv) {
         for (i = 0; i < list.length; i++) {
-
             if (list[i] == parentDiv) {
-
-                var newlist = Object.keys(choiseMaded[list[i]])
-
+                var newlist = Object.keys(choisenScreen[list[i]])
                 for (j = 0; j < newlist.length; j++) {
-
-                    var buttonList = choiseMaded[list[i]];
+                    var buttonList = choisenScreen[list[i]];
                     var arrbuttonList = Object.keys(buttonList);
-
                     if (buttonOnClick.id == arrbuttonList[j]) {
-                        totalPrice = hourCost * (hoursSumm += buttonList[buttonOnClick.id]);
-                        inner();
-                        break;
-                    }
+                        if (buttonOnClick.classList.contains('active-button')) {
+                            buttonOnClick.classList.remove('active-button');
+                            var linkID = list[i + 1];
+                            var link = '#' + linkID;
+                            linkStop.setAttribute('href', link);
+                            keys[parentDiv] = 0;
+                            hoursSumm -= buttonList[buttonOnClick.id];
+                            inner();
+                            break;
+                        } else {
+                            buttonOnClick.classList.add('active-button');
+                            linkStop.setAttribute('href', '/');
+                            keys[parentDiv] = buttonOnClick.id;
+                            hoursSumm += buttonList[buttonOnClick.id];
+                            inner();
+                            break;
+                        };
+
+                    };
                 };
             };
         };
-    }
+    };
 });
+
+inner();
