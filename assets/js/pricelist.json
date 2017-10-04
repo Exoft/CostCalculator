@@ -16,12 +16,12 @@ var price = {
                 "apiIntegration":
                 {
                     "whithoutApi": 8,
-                    "simplApi": 8,
+                    "simpleApi": 8,
                     "advancedApi": 32,
                 },
                 "authentication":
                 {
-                    "emai": 9,
+                    "email": 9,
                     "social": 16,
                     "twoFactor": 12,
                 },
@@ -92,7 +92,7 @@ var price = {
                 },
                 "authentication":
                 {
-                    "emai": 9,
+                    "email": 9,
                     "social": 18,
                     "twoFactor": 17,
                 },
@@ -163,7 +163,7 @@ var price = {
                 },
                 "authentication":
                 {
-                    "emai": 9,
+                    "email": 9,
                     "social": 19,
                     "twoFactor": 22,
                 },
@@ -234,7 +234,7 @@ var price = {
                 },
                 "authentication":
                 {
-                    "emai": 9,
+                    "email": 9,
                     "social": 20,
                     "twoFactor": 28,
                 },
@@ -308,12 +308,12 @@ var price = {
                 "apiIntegration":
                 {
                     "whithoutApi": 8,
-                    "simplApi": 8,
+                    "simpleApi": 8,
                     "advancedApi": 32,
                 },
                 "authentication":
                 {
-                    "emai": 9,
+                    "email": 9,
                     "social": 16,
                     "twoFactor": 12,
                 },
@@ -384,7 +384,7 @@ var price = {
                 },
                 "authentication":
                 {
-                    "emai": 9,
+                    "email": 9,
                     "social": 18,
                     "twoFactor": 17,
                 },
@@ -455,7 +455,7 @@ var price = {
                 },
                 "authentication":
                 {
-                    "emai": 9,
+                    "email": 9,
                     "social": 19,
                     "twoFactor": 22,
                 },
@@ -526,7 +526,7 @@ var price = {
                 },
                 "authentication":
                 {
-                    "emai": 9,
+                    "email": 9,
                     "social": 20,
                     "twoFactor": 28,
                 },
@@ -599,12 +599,12 @@ var price = {
                 "apiIntegration":
                 {
                     "whithoutApi": 16,
-                    "simplApi": 8,
+                    "simpleApi": 8,
                     "advancedApi": 32,
                 },
                 "authentication":
                 {
-                    "emai": 9,
+                    "email": 9,
                     "social": 16,
                     "twoFactor": 24,
                 },
@@ -675,7 +675,7 @@ var price = {
                 },
                 "authentication":
                 {
-                    "emai": 9,
+                    "email": 9,
                     "social": 18,
                     "twoFactor": 35,
                 },
@@ -746,7 +746,7 @@ var price = {
                 },
                 "authentication":
                 {
-                    "emai": 9,
+                    "email": 9,
                     "social": 19,
                     "twoFactor": 45,
                 },
@@ -817,7 +817,7 @@ var price = {
                 },
                 "authentication":
                 {
-                    "emai": 9,
+                    "email": 9,
                     "social": 20,
                     "twoFactor": 56,
                 },

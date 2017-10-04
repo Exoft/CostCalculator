@@ -1,3 +1,134 @@
+var operationSystem, pageName, screenButton, totalPrice, pagesNameList;
+var answers = {
+    'mobileOperatingSystem': 0,
+    'screens': 1,
+};
+var nodeListTotalPrice = document.getElementsByClassName("total-price");
+
+function inner() {
+    var summ = 0;
+    var choiseMaded;
+    for (var j = 2; j < Object.keys(answers).length; j++) {
+        choiseMaded = price[operationSystem].screenNumbers[screenButton];
+        var answersblock = choiseMaded[Object.keys(answers)[j]];
+        var choise = answersblock[Object.values(answers)[j]];
+        if (choise) { summ += choise; }
+    };
+    if (answers['mobileOperatingSystem']) {
+        totalPrice = answers['mobileOperatingSystem'] * (answers['screens'] + summ);
+    } else {
+        totalPrice = 0;
+    }
+    for (var i = 0; i < nodeListTotalPrice.length; i++) {
+        nodeListTotalPrice[i].innerHTML = "$" + totalPrice;
+    }
+};
+
+function removeActiveButton(buttonOnClick) {
+    buttonOnClick.classList.remove('active-button');
+    var linkStop = buttonOnClick.parentNode;
+    switch (pageName) {
+        case 'mobileOperatingSystem':
+            linkID = 'screens'
+            break;
+        case 'screens':
+            linkID = 'userInterfaceDesign'
+            break;
+        default:
+            linkID = pagesNameList[i + 1];
+            break;
+    };
+    var link = '#' + linkID;
+    linkStop.setAttribute('href', link);
+    answers[pageName] = 0;
+};
+
+function oneButtonActive(buttonOnClick) {
+    var siblingButtons = buttonOnClick.parentNode.parentNode.childNodes;
+    var linkRestart;
+    var linkStop = buttonOnClick.parentNode;
+
+    for (x = 0; x < siblingButtons.length; x++) {
+        if (siblingButtons[x].classList && siblingButtons[x].childNodes[1].classList.contains('active-button')) {
+            siblingButtons[x].childNodes[1].classList.remove('active-button');
+            var linkRestart = siblingButtons[x];
+            var linkID;
+            switch (pageName) {
+                case 'mobileOperatingSystem':
+                    linkID = 'screens'
+                    break;
+                case 'screens':
+                    linkID = 'userInterfaceDesign'
+                    break;
+                default:
+                    linkID = pagesNameList[i + 1];
+                    break;
+            };
+
+            var link = '#' + linkID;
+            linkRestart.setAttribute('href', link);
+            answers[pageName] = 0;
+        }
+    };
+    buttonOnClick.classList.add('active-button');
+    linkStop.setAttribute('href', '/');
+};
+
+document.querySelector('main').addEventListener('click', function() {
+    var buttonOnClick = event.target;
+    pageName = buttonOnClick.parentNode.parentNode.parentNode.parentNode.id;
+    var linkStop = buttonOnClick.parentNode;
+    switch (pageName) {
+        case 'mobileOperatingSystem':
+            operationSystem = buttonOnClick.id;
+            if (buttonOnClick.classList.contains('active-button')) {
+                removeActiveButton(buttonOnClick);
+                inner();
+            } else {
+                oneButtonActive(buttonOnClick);
+                answers[pageName] = price[operationSystem].hourcost;
+                inner();
+            }
+            break;
+        case 'screens':
+            screenButton = buttonOnClick.id;
+            choisenScreen = price[operationSystem].screenNumbers[screenButton];
+            pagesNameList = Object.getOwnPropertyNames(choisenScreen);
+            if (buttonOnClick.classList.contains('active-button')) {
+                removeActiveButton(buttonOnClick);
+                inner();
+            } else {
+                oneButtonActive(buttonOnClick);
+                answers[pageName] = choisenScreen.userInterfaceDesign.stock;
+                inner();
+            }
+            break;
+        default:
+            for (i = 0; i < pagesNameList.length; i++) {
+                if (pagesNameList[i] == pageName) {
+                    var pages = Object.keys(choisenScreen[pagesNameList[i]])
+                    for (j = 0; j < pages.length; j++) {
+                        var buttonList = choisenScreen[pagesNameList[i]];
+                        var buttons = Object.keys(buttonList);
+                        if (buttonOnClick.id == buttons[j]) {
+                            if (buttonOnClick.classList.contains('active-button')) {
+                                removeActiveButton(buttonOnClick)
+                                inner();
+                                break;
+                            } else {
+                                oneButtonActive(buttonOnClick);
+                                answers[pageName] = buttonOnClick.id;
+                                inner();
+                                break;
+                            };
+                        };
+                    };
+                };
+            };
+    };
+});
+
+
 var userName = getEstimateForm.name;
 
 userName.addEventListener('input', function() {
@@ -15,116 +146,6 @@ userEmail.addEventListener('change', function() {
     }
 })
 
-function loadJSON(callback) {
 
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType(".pricelist.json");
-    xobj.open('GET', 'my_data.json', true);
-    xobj.onreadystatechange = function() {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-
-            callback(xobj.responseText);
-        }
-    };
-    xobj.send(null);
-}
-
-function init() {
-    loadJSON(function(response) {
-        var priceList = JSON.parse(response);
-    });
-}
-
-var os, screen, screenchois = 0,
-    hourCost = 0,
-    hoursSumm = 1,
-    totalPrice, choiseMaded, list, keys = {};
-var nodeListTotalPrice = document.getElementsByClassName("total-price");
-
-function inner() {
-    var summ = 1;
-
-    for (var j = 0; j < Object.keys(keys).length; j++) {
-        choiseMaded = price[os].screenNumbers[screen];
-        var block = choiseMaded[Object.keys(keys)[j]];
-        var choise = block[Object.values(keys)[j]];
-        if (choise) { summ += choise; }
-    };
-
-    totalPrice = hourCost * (screenchois + summ);
-
-
-
-    for (var i = 0; i < nodeListTotalPrice.length; i++) {
-        nodeListTotalPrice[i].innerHTML = "$" + totalPrice;
-    }
-}
-
-document.querySelector('main').addEventListener('click', function() {
-    var buttonOnClick = event.target;
-    var parentDiv = buttonOnClick.parentNode.parentNode.parentNode.parentNode.id;
-    var linkStop = buttonOnClick.parentNode;
-    if (!parentDiv) {
-        return;
-    } else if (parentDiv == 'mobileOperatingSystem') {
-        os = buttonOnClick.id;
-        if (buttonOnClick.classList.contains('active-button')) {
-            buttonOnClick.classList.remove('active-button');
-            linkStop.setAttribute('href', '#screens');
-            hourCost = 0;
-            inner();
-        } else {
-            buttonOnClick.classList.add('active-button');
-            hourCost = price[os].hourcost;
-            linkStop.setAttribute('href', '/');
-            inner();
-        }
-    } else if (parentDiv == 'screens' && os) {
-        screen = buttonOnClick.id;
-        choisenScreen = price[os].screenNumbers[screen];
-        list = Object.getOwnPropertyNames(choisenScreen);
-        if (buttonOnClick.classList.contains('active-button')) {
-            buttonOnClick.classList.remove('active-button');
-            linkStop.setAttribute('href', '#screens');
-            screenchois = 0;
-            inner();
-        } else {
-            buttonOnClick.classList.add('active-button');
-            screenchois = choisenScreen.userInterfaceDesign.stock;
-            linkStop.setAttribute('href', '/');
-            inner();
-        }
-    } else if (parentDiv) {
-        for (i = 0; i < list.length; i++) {
-            if (list[i] == parentDiv) {
-                var newlist = Object.keys(choisenScreen[list[i]])
-                for (j = 0; j < newlist.length; j++) {
-                    var buttonList = choisenScreen[list[i]];
-                    var arrbuttonList = Object.keys(buttonList);
-                    if (buttonOnClick.id == arrbuttonList[j]) {
-                        if (buttonOnClick.classList.contains('active-button')) {
-                            buttonOnClick.classList.remove('active-button');
-                            var linkID = list[i + 1];
-                            var link = '#' + linkID;
-                            linkStop.setAttribute('href', link);
-                            keys[parentDiv] = 0;
-                            hoursSumm -= buttonList[buttonOnClick.id];
-                            inner();
-                            break;
-                        } else {
-                            buttonOnClick.classList.add('active-button');
-                            linkStop.setAttribute('href', '/');
-                            keys[parentDiv] = buttonOnClick.id;
-                            hoursSumm += buttonList[buttonOnClick.id];
-                            inner();
-                            break;
-                        };
-
-                    };
-                };
-            };
-        };
-    };
-});
 
 inner();
