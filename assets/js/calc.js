@@ -132,7 +132,7 @@ document.querySelector('main').addEventListener('click', function() {
 var userName = getEstimateForm.name;
 
 userName.addEventListener('input', function() {
-    var name = this.value.replace(/[^A-Za-z]/g, '').substring(0, 20);
+    var name = this.value.replace(/[^A-Za-z ]/g, '').substring(0, 20);
     this.value = name;
 });
 
@@ -142,7 +142,9 @@ userEmail.addEventListener('change', function() {
     var email = this.value;
     var patt = new RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
     if (!patt.test(email)) {
-        alert("please, enter your email correctly")
+        userEmail.classList.add('error');
+    } else {
+    	userEmail.classList.remove('error');
     }
 })
 
