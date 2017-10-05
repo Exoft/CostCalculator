@@ -20,7 +20,7 @@ body {
 }
 
 .main-page p {
-	font-size: 24px;
+    font-size: 24px;
     margin-right: auto;
     margin-left: auto;
     max-width: 30em;
@@ -29,14 +29,16 @@ body {
 }
 
 .start-button {
-    font-weight: 900;
-    font-size: 1em;
-    height: 2.5em;
+    font-weight: bold;
+    font-size: 18px;
+    height: 53px;
+    width: 272px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .previous-button {
@@ -48,8 +50,9 @@ header {
 
 .previous-button img {
     float: left;
-    width: 1.3em;
+    width: 1em;
     display: inline;
+    margin-right: 3px;
 }
 
 .rough-estimate-block {
@@ -158,10 +161,10 @@ input {
     border: solid 1px #fff;
     border-radius: 3em;
     margin-bottom: 1em;
-    font-size: 14px;
+    font-size: 18px;
     color: #fff;
-    height: 2.6em;
-    width: 19em;
+    height: 58px;
+    width: 403px;
     padding: 0 1em;
 }
 
@@ -177,7 +180,7 @@ input:last-child {
 }
 
 .error {
-	border: solid red 3px;
+    border: solid red 3px;
 }
 
 .mob-operating-system,
@@ -232,4 +235,5 @@ input:last-child {
     background-image: url(../image/backgrounds/estimatebg.png);
     background-size: cover;
     color: #fff;
+    font-size: 24px;
 }

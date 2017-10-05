@@ -1,0 +1,211 @@
+@media screen and (max-width: 240px) and (-webkit-min-device-pixel-ratio: 2),
+screen and (max-width: 320px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    h3 {
+        font-size: 24px;
+        margin: 0em;
+    }
+
+    .main-page p {
+        font-size: 14px;
+        margin-bottom: 1em;
+    }
+
+    .start-button {
+        font-weight: bold;
+        font-size: 18px;
+        height: 33px;
+        width: 172px;
+    }
+
+    .previous-button {
+        margin: 0 1%;
+        font-size: 9px;
+    }
+
+    .rough-estimate-block {
+        margin: 0 1%;
+        font-size: 8px;
+    }
+
+    .rough-estimate-block p:last-child {
+        display: block;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 22px;
+        margin-top: 0.7em;
+        margin-bottom: 0.7em;
+    }
+
+    button {
+        height: 33px;
+        width: 110px;
+        font-size: 9px;
+    }
+
+    .buttons-wrapper a {
+        margin: 0.2em;
+    }
+
+
+    input {
+        font-size: 14px;
+        height: 58px;
+        width: 200px;
+        padding: 0 1em;
+        margin-bottom: 0.5em
+    }
+
+    form {
+        margin-top: 1.5em;
+    }
+
+    .final-page {
+        font-size: 14px;
+    }
+
+    input:last-child {
+        margin: 1em;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-height: 400px) and (orientation:portrait),
+screen and (min-width: 400px) and (max-height: 650px) and (orientation:landscape) {
+    h3 {
+        font-size: 32px;
+        margin: 0em;
+    }
+
+    .main-page p {
+        font-size: 20px;
+        margin-bottom: 2.5em;
+    }
+
+    .start-button {
+        font-weight: bold;
+        font-size: 18px;
+        height: 53px;
+        width: 200px;
+    }
+
+    .previous-button {
+        margin: 0 1%;
+        font-size: 14px;
+    }
+
+    .rough-estimate-block {
+        margin: 0 3%;
+        font-size: 14px;
+    }
+
+    .rough-estimate-block p:last-child {
+        display: block;
+        font-size: 23px;
+    }
+
+    h4 {
+        font-size: 34px;
+        margin-top: 0.7em;
+        margin-bottom: 0.7em;
+    }
+
+    button {
+        border-radius: 3.5em;
+        height: 53px;
+        width: 131px;
+        font-size: 13px;
+    }
+
+    .buttons-wrapper a {
+        margin: 0.5em;
+    }
+
+
+    input {
+        font-size: 17px;
+        height: 40px;
+        width: 270px;
+        padding: 0 1em;
+        margin-bottom: 1.5em
+    }
+    form {
+        margin-top: 1.5em;
+    }
+
+    .final-page {
+        font-size: 17px;
+    }
+
+    input:last-child {
+        margin: 1em;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-height: 320px) and (orientation:landscape) {
+    h3 {
+        font-size: 28px;
+    }
+
+    .main-page p {
+        font-size: 16px;
+    }
+
+    .start-button {
+        font-size: 16px;
+        height: 43px;
+        width: 200px;
+    }
+
+    .previous-button {
+        margin: 0 1%;
+        font-size: 14px;
+    }
+
+    .rough-estimate-block {
+        margin: 0 3%;
+        font-size: 14px;
+    }
+
+    .rough-estimate-block p:last-child {
+        display: block;
+        font-size: 23px;
+    }
+
+    h4 {
+        font-size: 34px;
+        margin-top: 0;
+        margin-bottom: 0.3em;
+    }
+
+    button {
+        border-radius: 3.5em;
+        height: 43px;
+        width: 151px;
+        font-size: 13px;
+    }
+
+    .buttons-wrapper a {
+        margin: 0.5em 0.2em;
+    }
+
+
+    input {
+        font-size: 17px;
+        height: 40px;
+        width: 270px;
+        padding: 0 1em;
+        margin-bottom: 0.75em
+    }
+    form {
+        margin-top: 1em;
+    }
+
+    .final-page {
+        font-size: 17px;
+    }
+
+    input:last-child {
+        margin: 1em;
+    }
+}

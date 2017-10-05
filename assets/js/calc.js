@@ -11,7 +11,7 @@ function inner() {
     for (var j = 2; j < Object.keys(answers).length; j++) {
         choiseMaded = price[operationSystem].screenNumbers[screenButton];
         var answersblock = choiseMaded[Object.keys(answers)[j]];
-        var choise = answersblock[Object.values(answers)[j]];
+        var choise = answersblock[Object.keys(answers).map(function (e) {return answers[e]})[j]];
         if (choise) { summ += choise; }
     };
     if (answers['mobileOperatingSystem']) {
