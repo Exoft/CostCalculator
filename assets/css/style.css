@@ -134,10 +134,7 @@ button:focus {
     outline: none;
 }
 
-button:hover {
-    background-color: #333685;
-    color: #fff;
-}
+
 
 .active-button {
     background-color: #4E60A0;
@@ -177,6 +174,7 @@ input:last-child {
     color: #000;
     border: none;
     margin: 1.5em;
+    font-style: bold;
 }
 
 .error {

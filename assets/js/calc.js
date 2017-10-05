@@ -1,8 +1,9 @@
-var operationSystem, pageName, screenButton, totalPrice, pagesNameList;
+var operationSystem, pageName, screenButton, totalPrice, pagesNameList, toogle = 1;
 var answers = {
     'mobileOperatingSystem': 0,
     'screens': 1,
 };
+
 var nodeListTotalPrice = document.getElementsByClassName("total-price");
 
 function inner() {
@@ -11,10 +12,10 @@ function inner() {
     for (var j = 2; j < Object.keys(answers).length; j++) {
         choiseMaded = price[operationSystem].screenNumbers[screenButton];
         var answersblock = choiseMaded[Object.keys(answers)[j]];
-        var choise = answersblock[Object.keys(answers).map(function (e) {return answers[e]})[j]];
+        var choise = answersblock[Object.keys(answers).map(function(e) { return answers[e] })[j]];
         if (choise) { summ += choise; }
     };
-    if (answers['mobileOperatingSystem']) {
+    if (answers['mobileOperatingSystem'] > 2) {
         totalPrice = answers['mobileOperatingSystem'] * (answers['screens'] + summ);
     } else {
         totalPrice = 0;
@@ -71,20 +72,33 @@ function oneButtonActive(buttonOnClick) {
         }
     };
     buttonOnClick.classList.add('active-button');
-    linkStop.setAttribute('href', '/');
+    linkStop.setAttribute('href', '#');
 };
 
 document.querySelector('main').addEventListener('click', function() {
     var buttonOnClick = event.target;
     pageName = buttonOnClick.parentNode.parentNode.parentNode.parentNode.id;
     var linkStop = buttonOnClick.parentNode;
+
+    if (buttonOnClick.classList.contains('start-button')) {
+        smoothscroll(lastevent);
+        toogle = 0;
+    } else if (buttonOnClick.parentNode.classList.contains('previous-button')) {
+        smoothscroll(lastevent);
+    };
+
+
     switch (pageName) {
         case 'mobileOperatingSystem':
             operationSystem = buttonOnClick.id;
             if (buttonOnClick.classList.contains('active-button')) {
+                toogle = 0;
+                notScrolling(lastevent);
                 removeActiveButton(buttonOnClick);
                 inner();
             } else {
+                toogle = 1;
+                smoothscroll(lastevent);
                 oneButtonActive(buttonOnClick);
                 answers[pageName] = price[operationSystem].hourcost;
                 inner();
@@ -95,38 +109,49 @@ document.querySelector('main').addEventListener('click', function() {
             choisenScreen = price[operationSystem].screenNumbers[screenButton];
             pagesNameList = Object.getOwnPropertyNames(choisenScreen);
             if (buttonOnClick.classList.contains('active-button')) {
+                toogle = 2;
+                notScrolling(lastevent);
                 removeActiveButton(buttonOnClick);
                 inner();
             } else {
+                toogle = 1;
+                smoothscroll(lastevent);
                 oneButtonActive(buttonOnClick);
                 answers[pageName] = choisenScreen.userInterfaceDesign.stock;
                 inner();
             }
             break;
         default:
-            for (i = 0; i < pagesNameList.length; i++) {
-                if (pagesNameList[i] == pageName) {
-                    var pages = Object.keys(choisenScreen[pagesNameList[i]])
-                    for (j = 0; j < pages.length; j++) {
-                        var buttonList = choisenScreen[pagesNameList[i]];
-                        var buttons = Object.keys(buttonList);
-                        if (buttonOnClick.id == buttons[j]) {
-                            if (buttonOnClick.classList.contains('active-button')) {
-                                removeActiveButton(buttonOnClick)
-                                inner();
-                                break;
-                            } else {
-                                oneButtonActive(buttonOnClick);
-                                answers[pageName] = buttonOnClick.id;
-                                inner();
-                                break;
+            if (pagesNameList) {
+                for (i = 0; i < pagesNameList.length; i++) {
+                    if (pagesNameList[i] == pageName) {
+                        var pages = Object.keys(choisenScreen[pagesNameList[i]])
+                        for (j = 0; j < pages.length; j++) {
+                            var buttonList = choisenScreen[pagesNameList[i]];
+                            var buttons = Object.keys(buttonList);
+                            if (buttonOnClick.id == buttons[j]) {
+                                if (buttonOnClick.classList.contains('active-button')) {
+                                    notScrolling(lastevent);
+                                    removeActiveButton(buttonOnClick);
+                                    inner();
+                                    break;
+                                } else {
+                                    smoothscroll(lastevent);
+                                    oneButtonActive(buttonOnClick);
+                                    answers[pageName] = buttonOnClick.id;
+                                    inner();
+                                    break;
+                                };
                             };
                         };
                     };
                 };
-            };
+            } else {
+                smoothscroll(lastevent);
+            }
     };
 });
+
 
 
 var userName = getEstimateForm.name;
@@ -144,10 +169,8 @@ userEmail.addEventListener('change', function() {
     if (!patt.test(email)) {
         userEmail.classList.add('error');
     } else {
-    	userEmail.classList.remove('error');
+        userEmail.classList.remove('error');
     }
 })
-
-
 
 inner();
