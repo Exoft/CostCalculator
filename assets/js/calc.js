@@ -1,4 +1,4 @@
-var operationSystem, pageName, screenButton, totalPrice, pagesNameList, toogle = 1;
+var operationSystem, pageName, screenButton, totalPrice, pagesNameList, toogle = 0;
 var answers = {
     'mobileOperatingSystem': 0,
     'screens': 1,
@@ -82,10 +82,12 @@ document.querySelector('main').addEventListener('click', function() {
 
     if (buttonOnClick.classList.contains('start-button')) {
         smoothscroll(lastevent);
-        toogle = 0;
-    } else if (buttonOnClick.parentNode.classList.contains('previous-button')) {
+        
+    } else if (buttonOnClick.classList.contains('previous-button') || buttonOnClick.parentNode.classList.contains('previous-button')) {
         smoothscroll(lastevent);
-    };
+    } else if (buttonOnClick.tagName == "INPUT") {
+        return;
+    }
 
 
     switch (pageName) {
@@ -97,7 +99,10 @@ document.querySelector('main').addEventListener('click', function() {
                 removeActiveButton(buttonOnClick);
                 inner();
             } else {
-                toogle = 1;
+                if (answers.screens>1) {
+                    toogle = 1;
+                } else {
+                    toogle = 2;}
                 smoothscroll(lastevent);
                 oneButtonActive(buttonOnClick);
                 answers[pageName] = price[operationSystem].hourcost;
@@ -114,7 +119,10 @@ document.querySelector('main').addEventListener('click', function() {
                 removeActiveButton(buttonOnClick);
                 inner();
             } else {
-                toogle = 1;
+                if (answers.mobileOperatingSystem>1) {
+                    toogle = 1;
+                } else {
+                    toogle = 0;}
                 smoothscroll(lastevent);
                 oneButtonActive(buttonOnClick);
                 answers[pageName] = choisenScreen.userInterfaceDesign.stock;
@@ -162,14 +170,17 @@ userName.addEventListener('input', function() {
 });
 
 var userEmail = getEstimateForm.mail;
+var wrong = getEstimateForm.wrongEmail;
 
 userEmail.addEventListener('change', function() {
     var email = this.value;
     var patt = new RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
     if (!patt.test(email)) {
         userEmail.classList.add('error');
+        wrong.classList.add('show-error');
     } else {
         userEmail.classList.remove('error');
+        wrong.classList.remove('show-error');
     }
 })
 

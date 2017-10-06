@@ -23,9 +23,10 @@ body {
     font-size: 24px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 30em;
+    max-width: 32em;
     line-height: 1.5em;
     margin-bottom: 3em;
+    padding: 5%;
 }
 
 .start-button {
@@ -146,7 +147,7 @@ h4 {
 }
 
 form {
-    margin-top: 4em;
+    margin-top: 3em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,7 +158,7 @@ input {
     background-color: transparent;
     border: solid 1px #fff;
     border-radius: 3em;
-    margin-bottom: 1em;
+    margin-top: 1em;
     font-size: 18px;
     color: #fff;
     height: 58px;
@@ -173,14 +174,28 @@ input:last-child {
     background-color: #B9D2ED;
     color: #000;
     border: none;
-    margin: 1.5em;
-    font-style: bold;
+    margin: 2em;
+    font-weight: bold;
 }
+
 
 .error {
     border: solid red 3px;
 }
 
+.wrong-email {
+    display: none;
+    color: red;
+    text-align: center;
+    border:none;
+    margin: 0;
+    padding: 0
+}
+
+.show-error {
+    display: block;
+
+}
 .mob-operating-system,
 .dates-location {
     background-color: #B9D2ED;
