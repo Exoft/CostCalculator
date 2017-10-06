@@ -27,7 +27,6 @@ function inner() {
 
 function removeActiveButton(buttonOnClick) {
     buttonOnClick.classList.remove('active-button');
-    var linkStop = buttonOnClick.parentNode;
     switch (pageName) {
         case 'mobileOperatingSystem':
             linkID = 'screens'
@@ -40,18 +39,17 @@ function removeActiveButton(buttonOnClick) {
             break;
     };
     var link = '#' + linkID;
-    linkStop.setAttribute('href', link);
+    buttonOnClick.setAttribute('href', link);
     answers[pageName] = 0;
 };
 
 function oneButtonActive(buttonOnClick) {
-    var siblingButtons = buttonOnClick.parentNode.parentNode.childNodes;
+    var siblingButtons = buttonOnClick.parentNode.childNodes;
     var linkRestart;
-    var linkStop = buttonOnClick.parentNode;
 
     for (x = 0; x < siblingButtons.length; x++) {
-        if (siblingButtons[x].classList && siblingButtons[x].childNodes[1].classList.contains('active-button')) {
-            siblingButtons[x].childNodes[1].classList.remove('active-button');
+        if (siblingButtons[x].classList && siblingButtons[x].classList.contains('active-button')) {
+            siblingButtons[x].classList.remove('active-button');
             var linkRestart = siblingButtons[x];
             var linkID;
             switch (pageName) {
@@ -72,13 +70,12 @@ function oneButtonActive(buttonOnClick) {
         }
     };
     buttonOnClick.classList.add('active-button');
-    linkStop.setAttribute('href', '#');
+    buttonOnClick.setAttribute('href', '#');
 };
 
 document.querySelector('main').addEventListener('click', function() {
     var buttonOnClick = event.target;
-    pageName = buttonOnClick.parentNode.parentNode.parentNode.parentNode.id;
-    var linkStop = buttonOnClick.parentNode;
+    pageName = buttonOnClick.parentNode.parentNode.parentNode.id;
 
     if (buttonOnClick.classList.contains('start-button')) {
         smoothscroll(lastevent);
@@ -154,9 +151,7 @@ document.querySelector('main').addEventListener('click', function() {
                         };
                     };
                 };
-            } else {
-                smoothscroll(lastevent);
-            }
+            } 
     };
 });
 

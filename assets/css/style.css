@@ -1,16 +1,11 @@
 * {
-    text-decoration: none;
+    text-decoration:none; 
+    color: inherit;
     font-family: Raleway;
 }
 
-a:active,
-a:hover,
-a:focus,
-a {
-    text-decoration: none;
-    color: inherit;
-    cursor: default;
-    padding: 0em;
+a:hover {
+    text-decoration: underline;
 }
 
 body {
@@ -19,17 +14,22 @@ body {
     margin: 0;
 }
 
+.content-wrapper {
+    padding: 0;
+    margin:0 10%;
+}
+
 .main-page p {
-    font-size: 24px;
+    font-size: 24pt;
     margin-right: auto;
     margin-left: auto;
-    max-width: 32em;
+    max-width: 30em;
     line-height: 1.5em;
     margin-bottom: 3em;
-    padding: 5%;
 }
 
 .start-button {
+    color: #A7BBDD;
     font-weight: bold;
     font-size: 18px;
     height: 53px;
@@ -78,14 +78,14 @@ main {
     flex-direction: column;
 }
 
-.container {
+.page-container {
     width: 100vw;
     height: 100vh;
     text-align: center;
 }
 
 .main-page {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -98,14 +98,15 @@ main {
 }
 
 .page-wrapper {
-    height: 85%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0 10%;
 }
 
 h3 {
-    font-size: 36px;
+    font-size: 36pt;
     text-transform: uppercase;
     color: #6DD7E4;
 }
@@ -117,18 +118,15 @@ h3 {
     flex-wrap: wrap;
 }
 
-.buttons-wrapper a {
-    margin: 0.5em;
-}
-
 button {
     background-color: #ADC9E9;
     border-radius: 3em;
     height: 103px;
     width: 272px;
     border: none;
-    margin: 0em;
+    margin: 20px;
     font-size: 20px;
+    color: #1E1F3D;
 }
 
 button:focus {
@@ -143,7 +141,7 @@ button:focus {
 }
 
 h4 {
-    font-size: 36px;
+    font-size: 36pt;
 }
 
 form {
@@ -189,56 +187,97 @@ input:last-child {
     text-align: center;
     border:none;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 .show-error {
     display: block;
 
 }
-.mob-operating-system,
-.dates-location {
+.mob-operating-system-page,
+.dates-location-page {
     background-color: #B9D2ED;
 }
 
-.number-of-screens {
+.mob-operating-system-page a,
+.dates-location-page a {
+    color: #5F619C;
+}
+
+
+.number-of-screens-page {
     background-color: #E4F1FE;
     background-image: url(../image/backgrounds/screenbg.png);
     background-size: cover;
+    color: #1E1F3D;
 }
 
-.interface-design,
-.functionality-features,
-.billing-ecommers,
-.security-reliability {
+.number-of-screens-page a {
+    color: #5F619C;
+}
+
+.interface-design-page,
+.functionality-features-page,
+.billing-ecommers-page,
+.security-reliability-page {
     background-color: #5F619C;
     color: #fff;
 }
 
-.api-integrations,
-.used-multimedia {
-    background-color: #B9D2EE;
+.interface-design-page a,
+.functionality-features-page a,
+.billing-ecommers-page a,
+.security-reliability-page a {
+    color:#A7BBDD;
 }
 
-.authentication {
+
+.api-integrations-page,
+.used-multimedia-page {
+    background-color: #B9D2EE;
+    color: #1E1F3D;
+}
+
+.api-integrations-page a,
+.used-multimedia-page a {
+    color: #5F619C;
+}
+
+
+.authentication-page {
     background-image: url(../image/backgrounds/aabg.png);
     background-color: #E4F1FE;
+    color: #1E1F3D;
 }
 
-.social-engagement {
+.authentication-page a {
+    color: #5F619C;
+}
+
+.social-engagement-page {
     background-color: #E4F1FE;
     background-image: url(../image/backgrounds/socialbg.png);
     background-size: cover;
+    color: #1E1F3D;
 }
 
-.administration-analitics {
+.social-engagement-page a {
+    color: #5F619C;
+}
+
+.administration-analitics-page {
     background-color: #E4F1FE;
     background-image: url(../image/backgrounds/adminbg.png);
     background-size: cover;
+    color: #1E1F3D;
+}
+
+.administration-analitics-page a {
+    color: #5F619C;
 }
 
 .final-page {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;

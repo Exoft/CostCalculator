@@ -76,7 +76,7 @@ var price = {
                 },
             },
 
-            "medium":
+            "mediumSmall":
             {
                 "userInterfaceDesign":
                 {
@@ -147,7 +147,7 @@ var price = {
                 },
             },
 
-            "medium2":
+            "mediumLarge":
             {
                 "userInterfaceDesign":
                 {
@@ -368,7 +368,7 @@ var price = {
                 },
             },
 
-            "medium":
+            "mediumSmall":
             {
                 "userInterfaceDesign":
                 {
@@ -439,7 +439,7 @@ var price = {
                 },
             },
 
-            "medium2":
+            "mediumLarge":
             {
                 "userInterfaceDesign":
                 {
@@ -659,7 +659,7 @@ var price = {
                 },
             },
 
-            "medium":
+            "mediumSmall":
             {
                 "userInterfaceDesign":
                 {
@@ -730,7 +730,7 @@ var price = {
                 },
             },
 
-            "medium2":
+            "mediumLarge":
             {
                 "userInterfaceDesign":
                 {
