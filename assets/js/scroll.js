@@ -1,8 +1,8 @@
 $('.smoothScroll').click(function(event) {
-    return lastevent = event
+    return eventClick = event
 });
 
-var lastevent;
+var eventClick;
 
 function smoothscroll(eve) {
     eve.preventDefault();

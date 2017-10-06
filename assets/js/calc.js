@@ -6,7 +6,7 @@ var answers = {
 
 var nodeListTotalPrice = document.getElementsByClassName("total-price");
 
-function inner() {
+function calculateTotalPrice() {
     var summ = 0;
     var choiseMaded;
     for (var j = 2; j < Object.keys(answers).length; j++) {
@@ -78,10 +78,11 @@ document.querySelector('main').addEventListener('click', function() {
     pageName = buttonOnClick.parentNode.parentNode.parentNode.id;
 
     if (buttonOnClick.classList.contains('start-button')) {
-        smoothscroll(lastevent);
-        
+        smoothscroll(eventClick);
+        return;
     } else if (buttonOnClick.classList.contains('previous-button') || buttonOnClick.parentNode.classList.contains('previous-button')) {
-        smoothscroll(lastevent);
+        smoothscroll(eventClick);
+        return;
     } else if (buttonOnClick.tagName == "INPUT") {
         return;
     }
@@ -92,38 +93,45 @@ document.querySelector('main').addEventListener('click', function() {
             operationSystem = buttonOnClick.id;
             if (buttonOnClick.classList.contains('active-button')) {
                 toogle = 0;
-                notScrolling(lastevent);
+                notScrolling(eventClick);
                 removeActiveButton(buttonOnClick);
-                inner();
+                calculateTotalPrice();
             } else {
-                if (answers.screens>1) {
+                if (answers.screens > 1) {
                     toogle = 1;
                 } else {
-                    toogle = 2;}
-                smoothscroll(lastevent);
+                    toogle = 2;
+                }
+                smoothscroll(eventClick);
                 oneButtonActive(buttonOnClick);
                 answers[pageName] = price[operationSystem].hourcost;
-                inner();
+                calculateTotalPrice();
             }
             break;
         case 'screens':
+            if (!operationSystem) {
+                toogle = 0;
+                smoothscroll(eventClick);
+                return;
+            }
             screenButton = buttonOnClick.id;
             choisenScreen = price[operationSystem].screenNumbers[screenButton];
             pagesNameList = Object.getOwnPropertyNames(choisenScreen);
             if (buttonOnClick.classList.contains('active-button')) {
                 toogle = 2;
-                notScrolling(lastevent);
+                notScrolling(eventClick);
                 removeActiveButton(buttonOnClick);
-                inner();
+                calculateTotalPrice();
             } else {
-                if (answers.mobileOperatingSystem>1) {
+                if (answers.mobileOperatingSystem > 1) {
                     toogle = 1;
                 } else {
-                    toogle = 0;}
-                smoothscroll(lastevent);
+                    toogle = 0;
+                }
+                smoothscroll(eventClick);
                 oneButtonActive(buttonOnClick);
                 answers[pageName] = choisenScreen.userInterfaceDesign.stock;
-                inner();
+                calculateTotalPrice();
             }
             break;
         default:
@@ -136,22 +144,30 @@ document.querySelector('main').addEventListener('click', function() {
                             var buttons = Object.keys(buttonList);
                             if (buttonOnClick.id == buttons[j]) {
                                 if (buttonOnClick.classList.contains('active-button')) {
-                                    notScrolling(lastevent);
+                                    notScrolling(eventClick);
                                     removeActiveButton(buttonOnClick);
-                                    inner();
+                                    calculateTotalPrice();
                                     break;
                                 } else {
-                                    smoothscroll(lastevent);
+                                    smoothscroll(eventClick);
                                     oneButtonActive(buttonOnClick);
                                     answers[pageName] = buttonOnClick.id;
-                                    inner();
+                                    calculateTotalPrice();
                                     break;
                                 };
                             };
                         };
                     };
                 };
-            } 
+            } else if (!operationSystem) {
+                toogle = 0;
+                smoothscroll(eventClick);
+                return;
+            } else if (!screenButton) {
+                toogle = 2;
+                smoothscroll(eventClick);
+                return;
+            }
     };
 });
 
@@ -171,12 +187,12 @@ userEmail.addEventListener('change', function() {
     var email = this.value;
     var patt = new RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
     if (!patt.test(email)) {
-        userEmail.classList.add('error');
-        wrong.classList.add('show-error');
+        userEmail.classList.add('error-border');
+        wrong.classList.add('error-message');
     } else {
-        userEmail.classList.remove('error');
-        wrong.classList.remove('show-error');
+        userEmail.classList.remove('error-border');
+        wrong.classList.remove('error-message');
     }
 })
 
-inner();
+calculateTotalPrice();

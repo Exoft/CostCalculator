@@ -1,5 +1,5 @@
 * {
-    text-decoration:none; 
+    text-decoration: none;
     color: inherit;
     font-family: Raleway;
 }
@@ -16,7 +16,7 @@ body {
 
 .content-wrapper {
     padding: 0;
-    margin:0 10%;
+    margin: 0 10%;
 }
 
 .main-page p {
@@ -34,6 +34,7 @@ body {
     font-size: 18px;
     height: 53px;
     width: 272px;
+    color: #1E1F3D;
 }
 
 header {
@@ -136,7 +137,7 @@ button:focus {
 
 
 .active-button {
-    background-color: #4E60A0;
+    background-color: #333685;;
     color: #fff;
 }
 
@@ -177,23 +178,23 @@ input:last-child {
 }
 
 
-.error {
+.error-border {
     border: solid red 3px;
 }
 
-.wrong-email {
+.wrong-email-message {
     display: none;
     color: red;
     text-align: center;
-    border:none;
+    border: none;
     margin: 0;
     padding: 0;
 }
 
-.show-error {
+.error-message {
     display: block;
-
 }
+
 .mob-operating-system-page,
 .dates-location-page {
     background-color: #B9D2ED;
@@ -228,7 +229,7 @@ input:last-child {
 .functionality-features-page a,
 .billing-ecommers-page a,
 .security-reliability-page a {
-    color:#A7BBDD;
+    color: #A7BBDD;
 }
 
 
