@@ -1,5 +1,4 @@
-@media screen and (max-width: 240px) and (-webkit-min-device-pixel-ratio: 2),
-screen and (max-width: 320px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2) {
+@media screen and (max-width: 240px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 320px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2) {
     h3 {
         font-size: 24px;
         margin: 0em;
@@ -79,8 +78,7 @@ screen and (max-width: 320px) and (orientation:landscape) and (-webkit-min-devic
     }
 }
 
-@media screen and (max-width: 500px) and (min-height: 400px) and (orientation:portrait),
-screen and (min-width: 400px) and (max-height: 650px) and (orientation:landscape) {
+@media screen and (max-width: 500px) and (min-height: 400px) and (orientation:portrait), screen and (min-width: 400px) and (max-height: 650px) and (orientation:landscape) {
     h3 {
         font-size: 32px;
         margin: 0em;
@@ -102,7 +100,7 @@ screen and (min-width: 400px) and (max-height: 650px) and (orientation:landscape
     }
 
     .previous-button {
-        margin: 0 1%;
+        margin: 0 3%;
         font-size: 14px;
     }
 
@@ -180,9 +178,6 @@ screen and (min-width: 400px) and (max-height: 650px) and (orientation:landscape
         margin: 0 5%;
     }
 
-
-
-
     .start-button {
         font-size: 16px;
         height: 43px;
@@ -190,7 +185,7 @@ screen and (min-width: 400px) and (max-height: 650px) and (orientation:landscape
     }
 
     .previous-button {
-        margin: 0 1%;
+        margin: 0 3%;
         font-size: 14px;
     }
 
@@ -249,6 +244,11 @@ screen and (min-width: 400px) and (max-height: 650px) and (orientation:landscape
     }
 }
 
+@media screen and (min-height: 501px) and (max-width: 790px) and (orientation: portrait) {
+    button {
+        margin: 2.5%
+    }
+}
 
 @media (hover:hover) {
     button:hover {
