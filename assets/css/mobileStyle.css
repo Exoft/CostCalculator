@@ -40,11 +40,7 @@
         height: 33px;
         width: 110px;
         font-size: 9px;
-    }
-
-
-    .buttons-wrapper a {
-        margin: 0.2em;
+         margin: 0.2em;
     }
 
     .page-wrapper {
@@ -130,11 +126,6 @@
         height: 53px;
         width: 131px;
         font-size: 13px;
-        margin: 2%;
-    }
-
-
-    .buttons-wrapper a {
         margin: 0.5em;
     }
 
@@ -210,12 +201,8 @@
         height: 43px;
         width: 151px;
         font-size: 13px;
-    }
-
-    .buttons-wrapper a {
         margin: 0.5em 0.2em;
     }
-
 
     input {
         font-size: 17px;
