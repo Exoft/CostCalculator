@@ -290,3 +290,7 @@ input:last-child {
     color: #fff;
     font-size: 24px;
 }
+
+.hide-block {
+    display: none;
+}

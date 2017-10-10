@@ -83,7 +83,7 @@ document.querySelector('main').addEventListener('click', function() {
     } else if (buttonOnClick.classList.contains('previous-button') || buttonOnClick.parentNode.classList.contains('previous-button')) {
         smoothscroll(eventClick);
         return;
-    } else if (buttonOnClick.tagName == "INPUT") {
+    } else if (buttonOnClick.tagName == "INPUT" || buttonOnClick.tagName == "DIV" || buttonOnClick.tagName == "FORM") {
         return;
     }
 
@@ -223,6 +223,9 @@ document.getElementById('getEstimateButton').addEventListener('click', function 
             email: userEmail.value,
             answer: addTableTag, 
         });
+
+        document.getElementsByTagName('main')[0].classList.add('hide-block');
+        document.getElementsByTagName('footer')[0].classList.remove('hide-block');
     }
 });
 
