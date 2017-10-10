@@ -229,4 +229,8 @@ document.getElementById('getEstimateButton').addEventListener('click', function 
     }
 });
 
+document.getElementById('startAgain').addEventListener('click', function () {
+    location.reload();
+});
+
 calculateTotalPrice();
