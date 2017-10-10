@@ -1,4 +1,4 @@
-@media screen and (max-width: 240px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 320px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2) {
+@media screen and (max-width: 240px), screen and (max-width: 320px) and (orientation:landscape) {
     h3 {
         font-size: 24px;
         margin: 0em;

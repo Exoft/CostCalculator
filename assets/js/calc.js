@@ -1,4 +1,4 @@
-var operationSystem, pageName, screenButton, totalPrice, pagesNameList, toogle = 0;
+var operationSystem, pageName, screenButton, totalPrice, pagesNameList, toogle = 0; finalListForMail="";
 var answers = {
     'mobileOperatingSystem': 0,
     'screens': 1,
@@ -171,28 +171,59 @@ document.querySelector('main').addEventListener('click', function() {
     };
 });
 
+function createTableForEmail () {
+    finalListForMail+="<tr><td>Mobile Operating System</td><td>"+operationSystem+"</td></tr><tr><td>Number Of Screens</td><td>"+screenButton+"</td></tr>"
+    for (var i = 2; i < Object.keys(answers).length; i++) {      
+        var serviseName = Object.keys(answers)[i];
+        var serviseValue = Object.keys(answers).map(function(e) { return answers[e] })[i]; 
+        finalListForMail += "<tr><td>"+serviseName+"</td><td>"+serviseValue+"</td></tr>";
+    }
+};
 
 
 var userName = getEstimateForm.name;
+var wrongName = getEstimateForm.wrongName;
 
 userName.addEventListener('input', function() {
     var name = this.value.replace(/[^A-Za-z ]/g, '').substring(0, 20);
     this.value = name;
+    if (name) {
+        userName.classList.remove('error-border');
+        wrongName.classList.remove('error-message')
+    }
 });
 
 var userEmail = getEstimateForm.mail;
-var wrong = getEstimateForm.wrongEmail;
+var wrongEmail = getEstimateForm.wrongEmail;
 
 userEmail.addEventListener('change', function() {
     var email = this.value;
     var patt = new RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
     if (!patt.test(email)) {
         userEmail.classList.add('error-border');
-        wrong.classList.add('error-message');
+        wrongEmail.classList.add('error-message');
     } else {
         userEmail.classList.remove('error-border');
-        wrong.classList.remove('error-message');
+        wrongEmail.classList.remove('error-message');
     }
-})
+});
+
+document.getElementById('getEstimateButton').addEventListener('click', function () {
+    if (!userName.value) {
+        userName.classList.add('error-border');
+        wrongName.classList.add('error-message');
+    } else if (!userEmail.value) {
+        userEmail.classList.add('error-border');
+        wrongEmail.classList.add('error-message');
+    } else {
+        createTableForEmail ()
+        var addTableTag = "<table><tr><th>Servises</th><th>Value</th></tr>" + finalListForMail + "</table>"+"Tota Price: $"+totalPrice; 
+        emailjs.send("gmail","my_form",{
+            name: userName.value, 
+            email: userEmail.value,
+            answer: addTableTag, 
+        });
+    }
+});
 
 calculateTotalPrice();

@@ -8,6 +8,12 @@
     <link rel="shortcut icon" href="assets/image/icons/calculator.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/mobileStyle.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_Y9WU3ddAZzQmRS65wTFzQ");
+        })();
+    </script>
 </head>
 
 <body>
@@ -239,8 +245,9 @@
                 <form name="getEstimateForm">
                     <input type="text" name="name" placeholder="Name">
                     <input type="email" name="mail" placeholder="Email">
-                    <input type="text" name="wrongEmail" value="Wrong email address" disabled class="wrong-email-message">
-                    <input type="button" name="" value="Get Estimate">
+                    <input type="text" name="wrongEmail" value="Wrong email address" disabled class="wrong-input-message">
+                    <input type="text" name="wrongName" value="Enter your name, please" disabled class="wrong-input-message">
+                    <input type="button" id="getEstimateButton" value="Get Estimate">
                 </form>
             </div>
         </div>
